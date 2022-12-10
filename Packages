@@ -1,0 +1,15 @@
+Package: com.mdausch.exampletweak
+Version: 0.0.2-2+debug
+Section: Tweaks
+Maintainer: Maxwell Dausch <max.dausch@gmail.com>
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Filename: .//debs/com.mdausch.exampletweak_0.0.2-2+debug_iphoneos-arm.deb
+Size: 1702
+Installed-Size: 104
+MD5sum: 31301ab1bffd3af1d89979569cca8132
+Description: 55yeyeye65ey6
+Name: iOS3Fix
+Author: Maxwell Dausch <max.dausch@gmail.com>
+Depiction: https://mdausch.github.io/depictions/?p=com.mdausch.exampletweak
+
