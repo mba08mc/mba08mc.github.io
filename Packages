@@ -11,5 +11,13 @@ MD5sum: 31301ab1bffd3af1d89979569cca8132
 Description: 55yeyeye65ey6
 Name: iOS3Fix
 Author: Maxwell Dausch <max.dausch@gmail.com>
-Depiction: https://mdausch.github.io/depictions/?p=com.mdausch.exampletweak
 
+Package: mobileterminal
+Name: Mobile Terminal
+Depends:
+Version: 364.1-10
+Architecture: iphoneos-arm
+Description: A terminal emulator for the iPhone. With this you can be the daring system administrator, always ready for the action, whether you are on the beach, at the bar, even <i>under water</i> (ok, maybe not; stupid electricity). 
+Maintainer: MBA <mba08mc@hotmail.com>
+Author: Allen Porter <mba08mc@hotmail.com>
+Section: Tweaks
