@@ -1,1 +1,7 @@
-
+Origin: The only iPhoneOS 2 Repository
+Label: iPhoneOS 2 Repository
+Suite: stable
+Version: 1.0
+Architectures: iphoneos-arm
+Components: main
+Description: The only iPhoneOS 2 focused Cydia source
