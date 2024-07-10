@@ -15,19 +15,3 @@ Description: Run cracked apps on iPhoneOS 2
  Created by minif and MBA
 Author: minif <mba08mc@hotmail.com>
 Name: iSign
-
-Package: com.saurik.myprogram
-Version: 1.0.4-1
-Section: Games
-Maintainer: Your Name <you@example.com>
-Architecture: iphoneos-arm
-Filename: ./MyProgram.deb
-Size: 906
-MD5sum: de7616e03c223b10ed2d294c1f8e723f
-Description: an example of using APT
- Every day people use Cydia, but with the
- instructions embodied in this package,
- people can publish for it as well.
-Name: MyProgram
-Author: Jay Freeman (saurik) <saurik@saurik.com>
-Homepage: http://www.saurik.com/id/7
