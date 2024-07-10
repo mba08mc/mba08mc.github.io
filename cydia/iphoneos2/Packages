@@ -3,16 +3,16 @@ Version: 1.0-1
 Architecture: iphoneos-arm
 Maintainer: MBA <mba08mc@hotmail.com>
 Filename: ./debs/iSign.deb
-Size: 2108
-MD5sum: 3368e78cfbd1e8a69112877d9611cc5a
-SHA1: fc06cde1ceeeb9d7ed19de514a38eb965b09fd88
-SHA256: d3f6ef29a6e983266029827d0381a2f72aa72793f0a3fea38a0c9ef11afbaa13
+Size: 2072
+MD5sum: 3ee11d3065c2ee5afe2f3df36f4f1968
+SHA1: c4de31b09f9edc958edffe223498b68c606ee7e8
+SHA256: ec9d263bb6dcbd04d5d6d0cc5dae1354230aaf81f7eb64558196ad98f8a716ae
 Section: Tweaks
 Homepage: http://www.altnet.online/id/1
 Description: Run cracked apps on iPhoneOS 2
  Fixes the composite trust property
- list on iPhoneOS 2.1 and later. Created
- by minif and converted into a Cydia
- tweak by MBA. Restart required
-Author: minif
+ list on iPhoneOS 2.1 and later.
+ Created by minif and MBA
+Author: minif <mba08mc@hotmail.com>
 Name: iSign
+
