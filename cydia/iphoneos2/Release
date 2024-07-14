@@ -1,11 +1,7 @@
-Origin: Saurik's Example for Cydia
-Label: Cydia Example
+Origin: iPhoneOS 2
+Label: iPhoneOS 2 Repository
 Suite: stable
-Version: 0.9
-Codename: tangelo
+Version: 1.0
 Architectures: iphoneos-arm
 Components: main
-Description: An Example Repository from HowTo Instructions
-MD5Sum:
- 07a4ca0b91734e0489874dc44bd55222 464 Packages
- 43e92f4ec43f4c39d8f4268c7418f353 380 Packages.bz2
+Description: The only iPhoneOS 2 focused Cydia source
