@@ -42,19 +42,18 @@
 
 <style type="text/css">
   .nav-wrapper {
-    position: relative;
-    width: 100%;
-    height: 52px; /* height of chrome bar */
-    background-image: url('http://altnet.online/t/2002/us/en/i/1bg.gif');
-    background-repeat: repeat-x;
-  }
+  position: relative;
+  width: 100%;
+  height: 52px;
+  background-image: url('http://altnet.online/t/2002/us/en/i/1bg.gif');
+  background-repeat: repeat-x;
+  text-align: center; /* ← key part */
+}
 
-  .nav-buttons {
-    position: absolute;
-    top: 0px; /* adjust to center vertically over bar */
-    left: 50%;
-    transform: translateX(-50%); /* center horizontally */
-  }
+.nav-buttons {
+  display: inline-block; /* ← centers inside parent */
+  vertical-align: top;
+}
 </style>
 
 <div class="nav-wrapper">
