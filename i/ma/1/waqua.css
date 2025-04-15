@@ -1,0 +1,100 @@
+
+
+A {
+    text-decoration: none;
+}
+
+A:link {
+    color:           #3366cc;
+    text-decoration: none;
+}
+
+A:visited {
+    color:           #663399;
+    text-decoration: none;
+}
+
+A:active {
+    color:           #cccccc;
+    text-decoration: none;
+}
+
+BODY, TD, CENTER, P {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   10px;
+    color:       #333333;
+}
+
+.body {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   10px;
+    color:       #333333;
+}
+
+.content {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:   11px;
+    font-weight: normal;
+    color:       #000000;
+}
+
+.disclaimer {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   9px;
+    color:       #999999;
+}
+
+.error {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   9px;
+    color:       #990000;
+    font-weight: bold;
+}
+
+.filebrowser {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   9px;
+    color:       #000000;
+}
+
+.form {
+    font-family: Courier, "Courier New";
+    font-size:   10px;
+}
+
+.headline {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:   14px;
+    font-weight: bold;
+    color:       #000000;
+}
+
+.instr {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   10px;
+    font-weight: bold;
+}
+
+.label {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   9px;
+    color:       #000000;
+}
+
+.message {
+    font-family: Geneva, Verdana, Arial, Helvetica;
+    font-size:   9px;
+}
+
+.preference {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size:   12px;
+    font-weight: bold;
+    color:       #000000;
+}
+
+.reminder {
+    font-family: "Times New Roman", Times, serif;
+    font-size:   28px;
+    color:       #000000;
+}

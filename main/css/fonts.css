@@ -1,0 +1,25 @@
+/* CSS definitions for fonts */
+
+BODY { margin: 0px 0px; background: #ffffff; font: 10px Geneva, Verdana, Arial, Helvetica, sans-serif; }
+TABLE, TD { font: 10px Geneva, Verdana, Arial, Helvetica, sans-serif; }
+
+.V9 { font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 9px; }
+.G9 { font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 9px; }
+.G10 { font-family: Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 10px; }
+.G12 { font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 12px; }
+.L12 { font-family: Lucida Grande, Geneva, Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
+.T13 { font-family: Times, serif; font-size: 13px; line-height: 115%; }
+.TITLE { font-family: Helvetica, Arial, sans-serif; font-size: 24px; font-weight: 900;}
+.INTRO { font-family: Times, serif; font-size: 15px; }
+.form_style { font-size : 12px; font-family : geneva, arial, sans-serif; width: 215px; }
+.form_style_long { font-size : 12px; font-family : geneva, arial, sans-serif; width: 250px; }
+
+/* Sample Font Tags for HTML */
+
+/* <LINK REL="stylesheet" TYPE="text/css" HREF="/main/css/fonts.css" TITLE="fonts"> */
+
+/* <FONT FACE="Verdana,Geneva,Arial,Helvetica,sans-serif" SIZE=1 CLASS="V9"> */
+/* <FONT FACE="Geneva,Verdana,Arial,Helvetica,sans-serif" SIZE=1 CLASS="G10"> */
+/* <FONT FACE="Geneva,Arial,Helvetica,sans-serif" SIZE=2 CLASS="G12"> */
+/* <FONT FACE="Lucida Grande,Geneva,Verdana,Arial,Helvetica,sans-serif" SIZE=2 CLASS="L12"> */
+/* <FONT FACE="Times,serif" SIZE=2 CLASS="T13"> */
