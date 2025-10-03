@@ -1,17 +1,38 @@
-Package: com.mba.isign
+Package: com.mba.isign21
 Version: 1.0-1
 Architecture: iphoneos-arm
 Maintainer: MBA <mba08mc@hotmail.com>
-Filename: ./debs/iSign.deb
-Size: 826
-MD5sum: c24a8cb0934f644ad1af820cd9a9af3e
-SHA1: 13c02dee1929fe04adcfde607a1a90df1e086843
-SHA256: 889293bff20e5083702afb489e110e6757d6b3bce259218a360476c76a10486a
+Filename: ./debs/iSign2.1.deb
+Size: 331726
+MD5sum: a1bf0f138f9714890375479bf977749b
+SHA1: a97d602045e89d1f0d1e296efc3e54ad3d77ac92
+SHA256: d323883c33ac01540a29ba2eedb23b5ad1214a0a4a454e91b711b05f9bce0911
 Section: Tweaks
-Description: Run cracked apps on iPhoneOS 2
- Fixes the composite trust property
- list on iPhoneOS 2.1 and later.
- Created by minif and MBA
-Author: minif <mba08mc@hotmail.com>
-Name: iSign
+Description: Run cracked apps on iPhoneOS 2.1 and 2.1.1
+ Fixes the composite trust property list on iPhoneOS 2 and the MobileInstallation framework.
+ Credit to minif on github for patching the pList and Saurik for MobileSubstrate.
+ WARNING: This tweak is designed for only 2.1 and 2.1.1! Please download the version which correlated with your device version.
+ Downloading the wrong version WILL cause a bootloop. Restart required.
+ NOTICE: There is no need to have MobileSubstrate on your device! If you have Mobile/CydiaSubstrate installed from Telesphoreo you can remove it! This package contains an updated version, the latest from Telesphoreo is known to cause bootlops on iPhoneOS 2!
+Author: MBA <mba08mc@hotmail.com>
+Name: iSign 2.1
+
+Package: com.mba.isign22
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: MBA <mba08mc@hotmail.com>
+Filename: ./debs/iSign2.2.deb
+Size: 339016
+MD5sum: f726ac3a81548afe99979976d5579bf3
+SHA1: d0438c17330ffc7f7b2a0672739a8706e4ea966d
+SHA256: 5432e8f895910b60dfa9d43eea364688803fb4e46a7487d6261f6fdc6ea0b4e9
+Section: Tweaks
+Description: Run cracked apps on iPhoneOS 2.2
+ Fixes the composite trust property list on iPhoneOS 2 and the MobileInstallation framework.
+ Credit to minif on github for patching the pList and Saurik for MobileSubstrate.
+ WARNING: This tweak is designed for only 2.2! Please download the version which correlated with your device version.
+ Downloading the wrong version WILL cause a bootloop. Restart required.
+ NOTICE: There is no need to have MobileSubstrate on your device! If you have Mobile/CydiaSubstrate installed from Telesphoreo you can remove it! This package contains an updated version, the latest from Telesphoreo is known to cause bootlops on iPhoneOS 2!
+Author: MBA <mba08mc@hotmail.com>
+Name: iSign 2.2
 
