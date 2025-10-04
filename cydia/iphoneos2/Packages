@@ -3,10 +3,10 @@ Version: 1.0
 Architecture: iphoneos-arm
 Maintainer: MBA <mba08mc@hotmail.com>
 Filename: ./debs/CyPatch.deb
-Size: 1984
-MD5sum: 7783196fc3d8927fd56dbcb8260ff645
-SHA1: 71f6ce72f827a6fbcae32b198a5e3545beb57ef6
-SHA256: c9853a727c283ecda905e1e0193293937c02ab179ce8879a0dc24a029f9277d4
+Size: 1980
+MD5sum: 6ed123ea34e7bbca8a4a72598f4fbe4e
+SHA1: 5dc237c09207d97ed262b72a488ad62853f7f159
+SHA256: 2aabdaefb1861b0b42181a7ad5440f6f4df76cf4b2524c8a3e5ae0c890a89efe
 Section: Tweaks
 Description: Gets rid of the Cydia unsupported screen and brings back the old homepage
 Author: MBA <mba08mc@hotmail.com>
