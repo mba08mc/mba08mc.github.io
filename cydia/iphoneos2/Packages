@@ -1,3 +1,19 @@
+Package: com.mba.cypatch
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: MBA <mba08mc@hotmail.com>
+Depends: ldid
+Filename: ./debs/CyPatch.deb
+Size: 1984
+MD5sum: a004d40ee6c77251d156ed7b3edd43fa
+SHA1: b42901c5079bd699ce5e8b0d348aa99be83ee705
+SHA256: 030d51108993edf7225a84b2ff957a8d0d13a704f994ccfac684a32942dd3933
+Section: Tweaks
+Priority: optional
+Description: Gets rid of the Cydia unsupported screen and brings back the old homepage
+Author: MBA
+Name: CyPatch
+
 Package: com.mba.isign21
 Version: 1.0-1
 Architecture: iphoneos-arm
@@ -35,4 +51,46 @@ Description: Run cracked apps on iPhoneOS 2.2
  NOTICE: There is no need to have MobileSubstrate on your device! If you have Mobile/CydiaSubstrate installed from Telesphoreo you can remove it! This package contains an updated version, the latest from Telesphoreo is known to cause bootlops on iPhoneOS 2!
 Author: MBA <mba08mc@hotmail.com>
 Name: iSign 2.2
+
+Package: ldid
+Version: 1.0.476-3
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 108
+Depends: odcctools
+Filename: ./debs/ldid_1.0.476-3_iphoneos-arm.deb
+Size: 25642
+MD5sum: 02fec48423fbc9f30472d3b895228d87
+SHA1: 09ac23df7bfa4e9e5e664a603382419636b592ba
+SHA256: 05cb9f38f93491065b5f23ce3c9b09603b759fa6f60f7c3802b560ae40c3ff0b
+Section: Development
+Priority: optional
+Description: pseudo-codesign Mach-O files
+Depiction: http://cydia.saurik.com/info/ldid/
+Name: Link Identity Editor
+
+Package: mobileterminal
+Version: 316s-7
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 552
+Depends: ncurses
+Filename: ./debs/mobileterminal_316s-7_iphoneos-arm.deb
+Size: 286122
+MD5sum: a2b45a29425eb0ff45ae74e3635e9c8d
+SHA1: 26da6d4699006a1c5c849ca6dbc2e8fb943a55e6
+SHA256: af18ba0d3d9cd5fe1f619bed92f893227680c70222c8dd0df33de7c6953f440d
+Section: Terminal_Support
+Priority: standard
+Homepage: http://code.google.com/p/mobileterminal/
+Description: local UIKit-based Terminal emulator
+ This is a Terminal emulator for the iPhone. With it you can do all of
+ your standard system administration tasks from anywhere: ssh into
+ remote boxes, download files, edit configuration files, whatever.
+ Please note, though, that this package does not fully work yet on
+ iPhoneOS 2.x. For more information (and a status update) please click
+ below for More Information.
+Author: Allen Porter <allen.porter@gmail.com>
+Depiction: http://cydia.saurik.com/info/mobileterminal/
+Name: MobileTerminal
 
