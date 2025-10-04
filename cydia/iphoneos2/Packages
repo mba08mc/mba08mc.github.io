@@ -94,3 +94,20 @@ Author: Allen Porter <allen.porter@gmail.com>
 Depiction: http://cydia.saurik.com/info/mobileterminal/
 Name: MobileTerminal
 
+Package: odcctools
+Version: 277-6
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 5876
+Filename: ./debs/odcctools_277-6_iphoneos-arm.deb
+Size: 2225722
+MD5sum: bdc0e43e3e40c5b00e374acad9db4d0e
+SHA1: a7a042532aa9899393d99e258e7290cb3b2cf688
+SHA256: 5f99d91ae49350f7ad9dd15871a6008e1e00da6afc4e118a1b7c4bb7212a851e
+Section: Development
+Priority: optional
+Homepage: http://code.google.com/p/iphone-dev/
+Description: linker and assembler for the iPhone
+Depiction: http://cydia.saurik.com/info/odcctools/
+Name: Darwin CC Tools
+
