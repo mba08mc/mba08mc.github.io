@@ -52,40 +52,6 @@ Description: Run cracked apps on iPhoneOS 2.2
 Author: MBA <mba08mc@hotmail.com>
 Name: iSign 2.2
 
-Package: com.skyglow.stocksx
-Version: 2.3
-Architecture: iphoneos-arm
-Maintainer: Requis
-Depends: firmware (>= 2.0), firmware (<= 7.2), com.skyglow.weatherx
-Conflicts: com.ixmoe.1pwn.stockx
-Filename: ./debs/StocksX.deb
-Size: 13204
-MD5sum: 45d4e7ab4a6f6502df39985ea3ed5802
-SHA1: 7322d12740c1183012b1184d3431fb8ac6df9fe2
-SHA256: ceb4b65544368efe19d31c09467f2053c3f0dba516ee9029b5d58f78f00bf3f2
-Section: Tweaks
-Description: Fix the stocks app from iPhoneOS 2 to iOS 7 by redirecting requests to my servers!
-Author: Requis
-Depiction: http://cydia.skyglow.es/depictions/com.skyglow.stocksx/depictions/index.html
-Name: StocksX
-
-Package: com.skyglow.weatherx
-Version: 3.3
-Architecture: iphoneos-arm
-Maintainer: Requis
-Depends: firmware (>= 2.0), firmware (<= 7.9), preferenceloader, com.skyglow.stocksx
-Conflicts: com.ixmoe.1pwn.weatherx
-Filename: ./debs/WeatherX.deb
-Size: 77932
-MD5sum: a30ba735acff99c19c516a30a2575afa
-SHA1: a3019102eb3b5dd402832b508482a0e7915287ef
-SHA256: d978d6c38e5c6ffdb5a66cb9293d7b2be96922db639b1473eab3648ab3bac781
-Section: Tweaks
-Description: Fix iOS's weather app from iPhoneOS 2 to iOS 7, the weather widget in the notification center, and the temperature in the iPad clock app!
-Author: Requis
-Depiction: http://cydia.skyglow.es/depictions/com.skyglow.weatherx/depictions/index.html
-Name: WeatherX
-
 Package: ldid
 Version: 1.0.476-3
 Architecture: iphoneos-arm
