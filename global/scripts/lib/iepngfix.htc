@@ -6,7 +6,7 @@
 // This is licensed under the CC-GNU LGPL, version 2.1 or later.
 // For details, see: http://creativecommons.org/licenses/LGPL/2.1/
 // This must be a path to a blank image. That's all the configuration you need.
-var blankImg = 'http://images.apple.com/global/elements/blank.gif';
+var blankImg = 'http://altnet.online/global/elements/blank.gif';
 var f = 'DXImageTransform.Microsoft.AlphaImageLoader';
 function filt(s,m)
 	{

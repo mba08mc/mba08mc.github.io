@@ -7,7 +7,7 @@ sup, .sosumi { color:#76797c; }
 
 /* GLOBAL NAV */
 #globalheader #globalnav li a,
-#globalheader #globalsearch { background-image: url(http://images.apple.com/global/nav/images/globalnavbgblack.png); _background-image: url(http://images.apple.com/global/nav/images/globalnavbg.gif); }
+#globalheader #globalsearch { background-image: url(http://altnet.online/global/nav/images/globalnavbgblack.png); _background-image: url(http://altnet.online/global/nav/images/globalnavbg.gif); }
 
 /* CONTENT */
 #content { color:#a8a8a8; }
@@ -20,24 +20,24 @@ sup, .sosumi { color:#76797c; }
 #breadcrumb { color:#ccc; }
 
 /* NEW BREADCRUMBS */
-#breadcrumbs { color: #999; background-image: url(http://images.apple.com/global/nav/images/breadcrumb_bgblack.png); text-shadow: none; }
+#breadcrumbs { color: #999; background-image: url(http://altnet.online/global/nav/images/breadcrumb_bgblack.png); text-shadow: none; }
 #breadcrumbs a { color: #999; }
 #breadcrumbs a:hover { color: #ccc; }
-#breadcrumbs span { background-image: url(http://images.apple.com/global/nav/images/breadcrumb_sepblack.png); }
-.gf-900 #breadcrumbs { background-image: url(http://images.apple.com/global/nav/images/breadcrumb_bgblack900.png); }
+#breadcrumbs span { background-image: url(http://altnet.online/global/nav/images/breadcrumb_sepblack.png); }
+.gf-900 #breadcrumbs { background-image: url(http://altnet.online/global/nav/images/breadcrumb_bgblack900.png); }
 
 /* DIRECTORY NAV */
-#directorynav { background-image: url(http://images.apple.com/global/nav/images/directory_bgblack.png); border-color: #272727; }
-#directorynav .column.first { background-image: url(http://images.apple.com/global/nav/images/directory_bgblack.png); }
+#directorynav { background-image: url(http://altnet.online/global/nav/images/directory_bgblack.png); border-color: #272727; }
+#directorynav .column.first { background-image: url(http://altnet.online/global/nav/images/directory_bgblack.png); }
 #directorynav h3 { color: #999; }
 #directorynav a:link,
 #directorynav a:visited { color: #666; text-decoration: none; }
 #directorynav h3.standalone a:link,
 #directorynav h3.standalone a:visited { color: #999; }
 #directorynav a:hover { color: #ccc !important; }
-#directorynav .capbottom { background-image: url(http://images.apple.com/global/nav/images/directory_capbgblack.png); }
-.gf-900 #directorynav { background-image: url(http://images.apple.com/global/nav/images/directory_bgblack900.png); }
-.gf-900 #directorynav .capbottom { background-image: url(http://images.apple.com/global/nav/images/directory_capbgblack900.png); }
+#directorynav .capbottom { background-image: url(http://altnet.online/global/nav/images/directory_capbgblack.png); }
+.gf-900 #directorynav { background-image: url(http://altnet.online/global/nav/images/directory_bgblack900.png); }
+.gf-900 #directorynav .capbottom { background-image: url(http://altnet.online/global/nav/images/directory_capbgblack900.png); }
 
 /* FOOTER */
 #globalfooter { color:#aaa; }

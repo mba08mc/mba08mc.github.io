@@ -99,30 +99,30 @@ sup { padding-left:1px; font-size:10px !important; font-weight:normal !important
 #main ul ul.square { margin-top: 4px; margin-bottom: 5px; }
 #main ol.sosumi { margin-left: 0; padding-left: 2em; }
 
-#main a.pdf { background: url(http://images.apple.com/global/elements/icons/globaliconpdf12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.html { background: url(http://images.apple.com/global/elements/icons/globaliconhtml12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.qt { background: url(http://images.apple.com/global/elements/icons/globaliconqt12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.ical { background: url(http://images.apple.com/global/elements/icons/globaliconical12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.dl { background: url(http://images.apple.com/global/elements/icons/globalicondl11x10.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.dmg { background: url(http://images.apple.com/global/elements/icons/globalicondmg12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.zip { background: url(http://images.apple.com/global/elements/icons/globaliconzip12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.keynote { background: url(http://images.apple.com/global/elements/icons/globaliconkeynote12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
-#main a.audio { background: url(http://images.apple.com/global/elements/icons/globaliconaudio12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.pdf { background: url(http://altnet.online/global/elements/icons/globaliconpdf12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.html { background: url(http://altnet.online/global/elements/icons/globaliconhtml12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.qt { background: url(http://altnet.online/global/elements/icons/globaliconqt12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.ical { background: url(http://altnet.online/global/elements/icons/globaliconical12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.dl { background: url(http://altnet.online/global/elements/icons/globalicondl11x10.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.dmg { background: url(http://altnet.online/global/elements/icons/globalicondmg12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.zip { background: url(http://altnet.online/global/elements/icons/globaliconzip12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.keynote { background: url(http://altnet.online/global/elements/icons/globaliconkeynote12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
+#main a.audio { background: url(http://altnet.online/global/elements/icons/globaliconaudio12x12.gif) 0 0.4em no-repeat; display: block; padding-left: 20px; }
 
 #main .sidebar { font-size: 10px; line-height: 18px; color:#686868; }
 #main .callout { font-size: 11px; line-height: 18px; margin-bottom: 18px; }
 #main .last { margin-bottom: 0; }
 
 /* PRETTY SEARCH */
-input.prettysearch { width:200px; height: 16px; background: url(http://images.apple.com/global/elements/prettysearch/searchfield_repeat.png) center top repeat-x; border: 0px; margin: 0; padding: 3px 0 0 0; font:11px "Lucida Grande", Geneva, Arial, sans-serif; }
+input.prettysearch { width:200px; height: 16px; background: url(http://altnet.online/global/elements/prettysearch/searchfield_repeat.png) center top repeat-x; border: 0px; margin: 0; padding: 3px 0 0 0; font:11px "Lucida Grande", Geneva, Arial, sans-serif; }
 .search-wrapper { position: relative; width: 200px; }
 .search-wrapper input.prettysearch { width: 171px; margin-left: 20px; *margin-top:-1px; *margin-right:-2px; *margin-left:10px; }
 .search-wrapper .left, 
 .search-wrapper .right { behavior:url(/global/scripts/lib/iepngfix.htc); }
-.search-wrapper .left { display: block; position: absolute; left: 0; top: 0; width: 20px; height: 19px; background: url(http://images.apple.com/global/elements/prettysearch/searchfield_leftcap.png) left top no-repeat; }
-.search-wrapper .right { display: block; position: absolute; right: 0; top: 0; width: 10px; height: 19px; background: url(http://images.apple.com/global/elements/prettysearch/searchfield_rightcap.png) right top no-repeat; }
+.search-wrapper .left { display: block; position: absolute; left: 0; top: 0; width: 20px; height: 19px; background: url(http://altnet.online/global/elements/prettysearch/searchfield_leftcap.png) left top no-repeat; }
+.search-wrapper .right { display: block; position: absolute; right: 0; top: 0; width: 10px; height: 19px; background: url(http://altnet.online/global/elements/prettysearch/searchfield_rightcap.png) right top no-repeat; }
 .search-wrapper.empty.blurred input { color: #7E7E7E; }
-.search-wrapper .reset { position: absolute; width: 11px; height: 11px; overflow:hidden; z-index: 1; right: 4px; top: 4px; background: url(http://images.apple.com/global/elements/prettysearch/close.gif); display: block; cursor: pointer; _cursor:hand; }
+.search-wrapper .reset { position: absolute; width: 11px; height: 11px; overflow:hidden; z-index: 1; right: 4px; top: 4px; background: url(http://altnet.online/global/elements/prettysearch/close.gif); display: block; cursor: pointer; _cursor:hand; }
 .search-wrapper.empty .reset { display: none; }
 
 /* GLOBAL FOOTER */
