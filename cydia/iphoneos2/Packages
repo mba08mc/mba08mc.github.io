@@ -1,0 +1,111 @@
+Package: com.mba.cypatch
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: MBA <mba08mc@hotmail.com>
+Filename: ./debs/CyPatch.deb
+Size: 1980
+MD5sum: 6ed123ea34e7bbca8a4a72598f4fbe4e
+SHA1: 5dc237c09207d97ed262b72a488ad62853f7f159
+SHA256: 2aabdaefb1861b0b42181a7ad5440f6f4df76cf4b2524c8a3e5ae0c890a89efe
+Section: Tweaks
+Description: Gets rid of the Cydia unsupported screen and brings back the old homepage
+Author: MBA <mba08mc@hotmail.com>
+Name: CyPatch
+
+Package: com.mba.isign21
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: MBA <mba08mc@hotmail.com>
+Filename: ./debs/iSign2.1.deb
+Size: 331726
+MD5sum: a1bf0f138f9714890375479bf977749b
+SHA1: a97d602045e89d1f0d1e296efc3e54ad3d77ac92
+SHA256: d323883c33ac01540a29ba2eedb23b5ad1214a0a4a454e91b711b05f9bce0911
+Section: Tweaks
+Description: Run cracked apps on iPhoneOS 2.1 and 2.1.1
+ Fixes the composite trust property list on iPhoneOS 2 and the MobileInstallation framework.
+ Credit to minif on github for patching the pList and Saurik for MobileSubstrate.
+ WARNING: This tweak is designed for only 2.1 and 2.1.1! Please download the version which correlated with your device version.
+ Downloading the wrong version WILL cause a bootloop. Restart required.
+ NOTICE: There is no need to have MobileSubstrate on your device! If you have Mobile/CydiaSubstrate installed from Telesphoreo you can remove it! This package contains an updated version, the latest from Telesphoreo is known to cause bootlops on iPhoneOS 2!
+Author: MBA <mba08mc@hotmail.com>
+Name: iSign 2.1
+
+Package: com.mba.isign22
+Version: 1.0-1
+Architecture: iphoneos-arm
+Maintainer: MBA <mba08mc@hotmail.com>
+Filename: ./debs/iSign2.2.deb
+Size: 339016
+MD5sum: f726ac3a81548afe99979976d5579bf3
+SHA1: d0438c17330ffc7f7b2a0672739a8706e4ea966d
+SHA256: 5432e8f895910b60dfa9d43eea364688803fb4e46a7487d6261f6fdc6ea0b4e9
+Section: Tweaks
+Description: Run cracked apps on iPhoneOS 2.2
+ Fixes the composite trust property list on iPhoneOS 2 and the MobileInstallation framework.
+ Credit to minif on github for patching the pList and Saurik for MobileSubstrate.
+ WARNING: This tweak is designed for only 2.2! Please download the version which correlated with your device version.
+ Downloading the wrong version WILL cause a bootloop. Restart required.
+ NOTICE: There is no need to have MobileSubstrate on your device! If you have Mobile/CydiaSubstrate installed from Telesphoreo you can remove it! This package contains an updated version, the latest from Telesphoreo is known to cause bootlops on iPhoneOS 2!
+Author: MBA <mba08mc@hotmail.com>
+Name: iSign 2.2
+
+Package: ldid
+Version: 1.0.476-3
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 108
+Depends: odcctools
+Filename: ./debs/ldid_1.0.476-3_iphoneos-arm.deb
+Size: 25642
+MD5sum: 02fec48423fbc9f30472d3b895228d87
+SHA1: 09ac23df7bfa4e9e5e664a603382419636b592ba
+SHA256: 05cb9f38f93491065b5f23ce3c9b09603b759fa6f60f7c3802b560ae40c3ff0b
+Section: Development
+Priority: optional
+Description: pseudo-codesign Mach-O files
+Depiction: http://cydia.saurik.com/info/ldid/
+Name: Link Identity Editor
+
+Package: mobileterminal
+Version: 316s-7
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 552
+Depends: ncurses
+Filename: ./debs/mobileterminal_316s-7_iphoneos-arm.deb
+Size: 286122
+MD5sum: a2b45a29425eb0ff45ae74e3635e9c8d
+SHA1: 26da6d4699006a1c5c849ca6dbc2e8fb943a55e6
+SHA256: af18ba0d3d9cd5fe1f619bed92f893227680c70222c8dd0df33de7c6953f440d
+Section: Terminal_Support
+Priority: standard
+Homepage: http://code.google.com/p/mobileterminal/
+Description: local UIKit-based Terminal emulator
+ This is a Terminal emulator for the iPhone. With it you can do all of
+ your standard system administration tasks from anywhere: ssh into
+ remote boxes, download files, edit configuration files, whatever.
+ Please note, though, that this package does not fully work yet on
+ iPhoneOS 2.x. For more information (and a status update) please click
+ below for More Information.
+Author: Allen Porter <allen.porter@gmail.com>
+Depiction: http://cydia.saurik.com/info/mobileterminal/
+Name: MobileTerminal
+
+Package: odcctools
+Version: 277-6
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 5876
+Filename: ./debs/odcctools_277-6_iphoneos-arm.deb
+Size: 2225722
+MD5sum: bdc0e43e3e40c5b00e374acad9db4d0e
+SHA1: a7a042532aa9899393d99e258e7290cb3b2cf688
+SHA256: 5f99d91ae49350f7ad9dd15871a6008e1e00da6afc4e118a1b7c4bb7212a851e
+Section: Development
+Priority: optional
+Homepage: http://code.google.com/p/iphone-dev/
+Description: linker and assembler for the iPhone
+Depiction: http://cydia.saurik.com/info/odcctools/
+Name: Darwin CC Tools
+
