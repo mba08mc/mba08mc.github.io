@@ -43,7 +43,7 @@
 		padding:0px;
 		text-align:center;	/*	IE will center page	*/
 		min-width: 773px;	/*	Make sure page doesn’t disappear off the left side when browser window is made to small	*/
-		background:#FFF url(/Images/wl_merch_repeat.jpg) top center repeat-x;
+		background:#FFF url(/images/wl_merch_repeat.jpg) top center repeat-x;
 	}
 	.page {
 	/*  
@@ -104,7 +104,7 @@
 	*************************************************/
 	#head {
 		margin:0px;
-		background:url(/Images/wl_merch_head.jpg) top center no-repeat;
+		background:url(/images/wl_merch_head.jpg) top center no-repeat;
 		padding:6px 0px 20px 0px;
 	}
 	/*
@@ -619,7 +619,7 @@ a[class~='ButtonCenter'] {
 	as: "Button [name] [alignment]" with [name] being the name of that style of button
 	and [alignment] being ButtonRight or ButtonCenter. */
 .CTAButton {
-	background-image:url(/Images/Button_Right.gif);
+	background-image:url(/images/Button_Right.gif);
 }
 	.ButtonOuter {
 		display:block;
@@ -628,7 +628,7 @@ a[class~='ButtonCenter'] {
 		background:top left no-repeat;
 	}
 	.CTAButton .ButtonOuter {
-		background-image:url(/Images/Button_Left.gif);
+		background-image:url(/images/Button_Left.gif);
 	}
 		.ButtonMiddle {
 			display:block;
@@ -637,7 +637,7 @@ a[class~='ButtonCenter'] {
 			background:bottom left no-repeat;
 		}
 		.CTAButton .ButtonMiddle {
-			background-image:url(/Images/Button_Left.gif);
+			background-image:url(/images/Button_Left.gif);
 		}
 			.ButtonInner {
 				display:block;
@@ -646,7 +646,7 @@ a[class~='ButtonCenter'] {
 				background:bottom right no-repeat;
 			}
 			.CTAButton .ButtonInner {
-				background-image:url(/Images/Button_Right.gif);
+				background-image:url(/images/Button_Right.gif);
 			}
 				.ButtonText {
 					line-height:0.889em;
@@ -666,7 +666,7 @@ a[class~='ButtonCenter'] {
 	display:block;
 	font-family: Verdana;
 	padding:5px;
-	background: #F1F1F1 url(/Images/HigButton_Default.gif) center repeat-x ;
+	background: #F1F1F1 url(/images/HigButton_Default.gif) center repeat-x ;
 	border:1px solid #00156E; 
 	color:#00156E;
 	font-size: 95%;
@@ -674,21 +674,21 @@ a[class~='ButtonCenter'] {
 }
 
 .HIGButton:active { 
-	background: #B7D8ED url(/Images/HigButton_Pressed.gif) center repeat-x ;
+	background: #B7D8ED url(/images/HigButton_Pressed.gif) center repeat-x ;
 	text-decoration:none;
 }
 .HIGButton:hover { 
-	background:url(/Images/HigButton_Hot.gif) center repeat-x ;
+	background:url(/images/HigButton_Hot.gif) center repeat-x ;
 	text-decoration:none;
 }
 
 /* Accentuated, this button is green*/
 .Accentuated:link,.Accentuated:visited {
-	background:url(/Images/HigButton_Rest_Accentuated.gif) center repeat-x ;
+	background:url(/images/HigButton_Rest_Accentuated.gif) center repeat-x ;
 	border-color:#1AAB1F;
 }
 .Accentuated:active {
-	background:#9EEE8D url(/Images/HigButton_Pressed_Accentuated.gif) center repeat-x ;
+	background:#9EEE8D url(/images/HigButton_Pressed_Accentuated.gif) center repeat-x ;
 	border-color: #1AAB1F;
 }
 .Accentuated:hover {
@@ -697,11 +697,11 @@ a[class~='ButtonCenter'] {
 }
 /* Commerce, this button is orange, it is similare to the call to action button*/
 .Commerce:link,.Commerce:visited {
-	background:url(/Images/HigButton_Rest_Commerce.gif) center repeat-x ;
+	background:url(/images/HigButton_Rest_Commerce.gif) center repeat-x ;
 	border-color: #C57000;
 }
 .Commerce:active  {
-	background:#FFAB7C url(/Images/HigButton_Pressed_Commerce.gif) center repeat-x ;
+	background:#FFAB7C url(/images/HigButton_Pressed_Commerce.gif) center repeat-x ;
 	background-color:#FFAB7C;
 }
 .Commerce:hover {
@@ -802,16 +802,16 @@ div#ifaContent {
 	}
 		/*	There are 1 to 5 posible columns, 1 column simply have a border around the box	*/
 		.columns_5 {
-			background: url(/Images/borders_5.gif);
+			background: url(/images/borders_5.gif);
 		}
 		.columns_4 {
-			background: url(/Images/borders_4.gif);
+			background: url(/images/borders_4.gif);
 		}
 		.columns_3 {
-			background: url(/Images/borders_3.gif);
+			background: url(/images/borders_3.gif);
 		}
 		.columns_2 {
-			background: url(/Images/borders_2.gif);
+			background: url(/images/borders_2.gif);
 		}
 			#pseudoTable .topBottom {
 				background-repeat:no-repeat;
@@ -823,16 +823,16 @@ div#ifaContent {
 				clear:both;
 			}
 				.columns_5 .topBottom {
-					background: url(/Images/topBottom_5.gif);
+					background: url(/images/topBottom_5.gif);
 				}
 				.columns_4 .topBottom {
-					background: url(/Images/topBottom_4.gif);
+					background: url(/images/topBottom_4.gif);
 				}
 				.columns_3 .topBottom {
-					background: url(/Images/topBottom_3.gif);
+					background: url(/images/topBottom_3.gif);
 				}
 				.columns_2 .topBottom {
-					background: url(/Images/topBottom_2.gif);
+					background: url(/images/topBottom_2.gif);
 				}
 			#pseudoTable .column {
 				padding:0px;
@@ -1092,7 +1092,7 @@ div#ifaContent {
 #MX_HomePage .box {
 	padding:0px;
 	position:relative;
-	background:#FFF url(/Images/bg.gif) repeat-y;
+	background:#FFF url(/images/bg.gif) repeat-y;
 }
 	#MX_HomePage #modulesFrame {
 		width:598px;     
@@ -1280,35 +1280,35 @@ div#ifaContent {
 	border:1px solid #D8E6F8;
 }
 #MX_ServiceMultiOfferPage .offers_2 {
-	background:url(/Images/topBottom_2.gif) top left repeat-y;
+	background:url(/images/topBottom_2.gif) top left repeat-y;
 }
 #MX_ServiceMultiOfferPage .offers_3 {
-	background:url(/Images/topBottom_3.gif) top left repeat-y;
+	background:url(/images/topBottom_3.gif) top left repeat-y;
 }
 #MX_ServiceMultiOfferPage .offers_4 {
-	background:url(/Images/borders_4.gif) top left repeat-y;
+	background:url(/images/borders_4.gif) top left repeat-y;
 }
 #MX_ServiceMultiOfferPage .offers_5 {
-	background:url(/Images/topBottom_5.gif) top left repeat-y;
+	background:url(/images/topBottom_5.gif) top left repeat-y;
 }
 	/* table body style */
 	#MX_ServiceMultiOfferPage .offers_1 tbody {
 
 	}
 	#MX_ServiceMultiOfferPage .offers_2 tbody {
-		background: url(/Images/borders_2.gif);
+		background: url(/images/borders_2.gif);
 	}
 	#MX_ServiceMultiOfferPage .offers_3 tbody {
-		background: url(/Images/borders_3.gif);
+		background: url(/images/borders_3.gif);
 	}
 	#MX_ServiceMultiOfferPage .offers_4 tbody {
 		
 	}
 	#MX_ServiceMultiOfferPage .offers_5 tbody {
-		background: url(/Images/borders_5.gif);
+		background: url(/images/borders_5.gif);
 	}
 	#MX_ServiceMultiOfferPage .offers_4 thead td,#MX_ServiceMultiOfferPage .offers_4 tfoot td {
-		background:url(/Images/topBottom_4.gif);
+		background:url(/images/topBottom_4.gif);
 		height:1px;
 		margin:0px;
 		padding:0px;
@@ -1570,22 +1570,22 @@ div#ifaContent {
 		margin:0px 0px 8px 0px;
 	}
 		#MX_PostSalesMainPage .columns_4 {
-			background: url(/Images/borders_4_gray.gif);
+			background: url(/images/borders_4_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_3 {
-			background: url(/Images/borders_3_gray.gif);
+			background: url(/images/borders_3_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_2 {
-			background: url(/Images/borders_2_gray.gif);
+			background: url(/images/borders_2_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_4 .topBottom {
-			background: url(/Images/topBottom_4_gray.gif);
+			background: url(/images/topBottom_4_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_3 .topBottom {
-			background: url(/Images/topBottom_3_gray.gif);
+			background: url(/images/topBottom_3_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_2 .topBottom {
-			background: url(/Images/topBottom_2_gray.gif);
+			background: url(/images/topBottom_2_gray.gif);
 		}
 		#MX_PostSalesMainPage .columns_1 {
 			border-color:#DDD;
@@ -1604,7 +1604,7 @@ div#ifaContent {
 				color:#377BDC;
 				padding:5px;
 				margin:0px;
-				background:url(/Images/Post_Sales_Gradient.gif) bottom repeat-x;
+				background:url(/images/Post_Sales_Gradient.gif) bottom repeat-x;
 			}
 			#MX_PostSalesMainPage .title a {
 				color:#377BDC;
@@ -1695,7 +1695,7 @@ div#ifaContent {
 			padding:8px 14px 8px 14px;
 			text-align:left;
 			color:#00156E;
-			background:url(/Images/VOIP_Gradient.gif) top repeat-x;
+			background:url(/images/VOIP_Gradient.gif) top repeat-x;
 		}
 		#plans tfoot td {
 			border:1px solid #DDD;
@@ -1716,7 +1716,7 @@ div#ifaContent {
 		}
 			#plans li {
 				list-style:none;
-				background:url(/Images/small_red_box.gif) 0px 5px no-repeat;
+				background:url(/images/small_red_box.gif) 0px 5px no-repeat;
 				margin:0px;
 				padding:0px 0px 0px 6px;
 			}
@@ -1863,7 +1863,7 @@ div#ifaContent {
 	background-color:#FFFFFF;
 }
 	#MX_RunOncePage #upper {
-		background-image: url(/Images/Run_Once_Gradient1.gif);
+		background-image: url(/images/Run_Once_Gradient1.gif);
 		background-position: bottom;
 		background-repeat: repeat-x;
 		vertical-align:middle;
@@ -1890,7 +1890,7 @@ div#ifaContent {
 		}
 		
 	#MX_RunOncePage #lower {
-		background-image: url(/Images/Run_Once_Gradient2.gif);
+		background-image: url(/images/Run_Once_Gradient2.gif);
 		background-position: bottom;
 		background-repeat: repeat-x;
 		text-align:right;
@@ -1996,7 +1996,7 @@ div#ifaContent {
 		border-right:1px solid #DDD;
 	}
 #MX_VOIPDevicesPage #Devices_Intro_Text {
-	background:url(/Images/VOIP_Gradient.gif) top repeat-x;
+	background:url(/images/VOIP_Gradient.gif) top repeat-x;
 	margin:0px;
 	border:1px solid #DDD;
 	border-bottom:0px solid #FFF;
@@ -2170,7 +2170,7 @@ div#ifaContent {
 		height:14px;
 	}
 		#MX_VOIPDevicesPage .popupTitleBar a {
-			background:url(/Images/glyph_close_rest.gif) no-repeat;
+			background:url(/images/glyph_close_rest.gif) no-repeat;
 			margin:2px;
 			display:block;
 			height:10px;
@@ -2178,7 +2178,7 @@ div#ifaContent {
 			float:right;
 		}
 			#MX_VOIPDevicesPage .popupTitleBar a:hover {
-				background:url(/Images/glyph_close_hover.gif) no-repeat;
+				background:url(/images/glyph_close_hover.gif) no-repeat;
 			}
 	#MX_VOIPDevicesPage .popupText {
 		padding:8px;
@@ -2202,7 +2202,7 @@ div#ifaContent {
 	padding:8px 0px 4px 0px;
 	color:#FE6600;
 }#MX_DiscoverPage {
-	background:url(/Images/BackgroundTopCenter.gif) top right no-repeat;
+	background:url(/images/BackgroundTopCenter.gif) top right no-repeat;
 	text-align:center;
 	margin-left: auto;	/*	center page in FF	*/
 	margin-right: auto;
@@ -2264,12 +2264,12 @@ div#ifaContent {
 	left:0px;
 	padding:0px;
 	margin:21px 0px 0px 1px;
-	background:url(/Images/NavRepeat.gif) 1px 0px repeat-y; /* images moved over one pixel to fix IE bug */
+	background:url(/images/NavRepeat.gif) 1px 0px repeat-y; /* images moved over one pixel to fix IE bug */
 }
 	#MX_DiscoverPage #linksBox {
 		margin:0px;
 		padding:0px;
-		background:url(/Images/NavMain.gif) 1px 0px no-repeat; /* images moved over one pixel to fix IE bug */
+		background:url(/images/NavMain.gif) 1px 0px no-repeat; /* images moved over one pixel to fix IE bug */
 		width:247px;
 	}
 		#MX_DiscoverPage #linkBoxHieght {
@@ -2348,12 +2348,12 @@ div#ifaContent {
 						padding:0px 6px 0px 10px;
 						display:block;
 						position:relative;
-						background:url(/Images/NavRolloverTop.gif) top left no-repeat;
+						background:url(/images/NavRolloverTop.gif) top left no-repeat;
 						width:187px; 
 						
 					}
 					#MX_DiscoverPage li[class='activeLink'] {
-						background:url(/Images/SuperCoolOverlay.png) repeat;
+						background:url(/images/SuperCoolOverlay.png) repeat;
 					}
 					#MX_DiscoverPage .activeLink a:hover {
 						text-decoration:none;
@@ -2383,11 +2383,11 @@ div#ifaContent {
 		position:relative;
 	}
 		#MX_DiscoverPage #titleBackground {
-			background:url(/Images/TopBannerRepeat.gif) 0px 1px repeat-y;
+			background:url(/images/TopBannerRepeat.gif) 0px 1px repeat-y;
 			margin:0px;
 		}
 			#MX_DiscoverPage #title {
-				background:url(/Images/TopBannerMain.gif) top left no-repeat;
+				background:url(/images/TopBannerMain.gif) top left no-repeat;
 				position:relative;
 			}
 				#MX_DiscoverPage #title h1 {
@@ -2424,14 +2424,14 @@ div#ifaContent {
 		margin:0px;
 		padding:0px;
 		width:777px;
-		background:url(/Images/CenterBackgroundRepeat.jpg) top left repeat-y;
+		background:url(/images/CenterBackgroundRepeat.jpg) top left repeat-y;
 	}
 		#MX_DiscoverPage #CenterTop {
 			margin:0px;
 			padding:0px;
 		}
 		#MX_DiscoverPage #discover {
-			background:url(/Images/CenterBackgroundBottom.jpg) bottom left no-repeat;
+			background:url(/images/CenterBackgroundBottom.jpg) bottom left no-repeat;
 		}
 			#MX_DiscoverPage .section {
 				display:none;
@@ -2450,12 +2450,12 @@ div#ifaContent {
 			}
 			#MX_DiscoverPage .innerPageBackground {
 				width:579px;
-				background:url(/Images/ForegroundBoxRepeat.gif) top left repeat-y;
+				background:url(/images/ForegroundBoxRepeat.gif) top left repeat-y;
 				margin:0px 0px 0px 10px;
 				
 			}
 				#MX_DiscoverPage .innerPage {
-					background:url(/Images/ForegroundBoxMain.gif) top left no-repeat;
+					background:url(/images/ForegroundBoxMain.gif) top left no-repeat;
 					padding:0px 13px 0px 8px;
 					position:relative;
 					width:558px;
@@ -2537,19 +2537,19 @@ div#ifaContent {
 			margin:0px 0px 13px 10px;
 		}
 	#MX_DiscoverPage #promotionalAreaBackground {
-		background:url(/Images/PromontionMiddle.gif) top left repeat;
+		background:url(/images/PromontionMiddle.gif) top left repeat;
 		margin:19px 0px 0px 10px;
 		padding:0px;
 		width:766px; /* IE fix, bakcground images will not show without width */
 	}
 		#MX_DiscoverPage #promotionalAreaMidground {
-			background:url(/Images/PromontionTop.gif) top left repeat-x;
+			background:url(/images/PromontionTop.gif) top left repeat-x;
 			margin:0px;
 			padding:0px;
 			width:100%; /* IE fix, bakcground images will not show without width */
 		}
 			#MX_DiscoverPage #promotionalArea {
-				background:url(/Images/PromontionBottom.gif) bottom left repeat-x;
+				background:url(/images/PromontionBottom.gif) bottom left repeat-x;
 				margin:0px;
 				padding:0px;
 				color:#333;
@@ -2581,7 +2581,7 @@ div#ifaContent {
 					
 					}
 .DiscoverButton {
-	background:url(/Images/GreenButtonRepeat.gif) top left repeat-y;
+	background:url(/images/GreenButtonRepeat.gif) top left repeat-y;
 	display:block;
 	float:left;
 	width:121px;
@@ -2591,13 +2591,13 @@ div#ifaContent {
 	cursor:pointer;
 }
 	.DiscoverButton strong {
-		background:url(/Images/GreenButtonTop.gif) top left no-repeat;
+		background:url(/images/GreenButtonTop.gif) top left no-repeat;
 		display:block;
 		padding-top:7px;
 		width:121px;
 	}
 		.DiscoverButton span {
-			background:url(/Images/GreenButtonBottom.gif) bottom left no-repeat;
+			background:url(/images/GreenButtonBottom.gif) bottom left no-repeat;
 			display:block;
 			padding:0px 5px 9px 5px;
 			width:111px;
@@ -2609,7 +2609,7 @@ div#ifaContent {
 	text-decoration:none;
 }
 .TryItButton {
-	background:url(/Images/OrangeButtonRepeat.gif) top left repeat-y;
+	background:url(/images/OrangeButtonRepeat.gif) top left repeat-y;
 	margin-right:16px; /* IE spacing */
 	float:right; /* floating left causes bug with spacing in IE */
 }
@@ -2618,10 +2618,10 @@ div#ifaContent {
 	margin-right:28px;
 }
 	.TryItButton strong {
-		background:url(/Images/OrangeButtonTop.gif) top left no-repeat;
+		background:url(/images/OrangeButtonTop.gif) top left no-repeat;
 	}
 		.TryItButton span {
-			background:url(/Images/OrangeButtonBottom.gif) bottom left no-repeat;
+			background:url(/images/OrangeButtonBottom.gif) bottom left no-repeat;
 		}
 
 
@@ -2630,7 +2630,7 @@ div#ifaContent {
  */
 #VistaBodyBackground
 {
-	background: url(/Images/BackgroundRepeat.jpg) top left repeat-x;
+	background: url(/images/BackgroundRepeat.jpg) top left repeat-x;
 	margin:0px;
 	padding:0px;
 	position:relative;
@@ -2646,14 +2646,14 @@ div#ifaContent {
 }
 	#VistaPresalesPage #VistaBackground
 	{
-		background: url(/Images/OuterRectangleRepeat.gif) 70px 0px repeat-y;
+		background: url(/images/OuterRectangleRepeat.gif) 70px 0px repeat-y;
 		margin:0px;
 		padding:0px;
 		position:relative;
 	}
 	#VistaPresalesPage #VistaInnerBackground
 	{
-		background: url(/Images/Background.jpg) top left no-repeat;
+		background: url(/images/Background.jpg) top left no-repeat;
 		width:800px;
 		margin:0px;
 		padding:80px 0px 0px 0px;
@@ -2712,12 +2712,12 @@ div#ifaContent {
 		}
 	#VistaPresalesPage #innerBox
 	{
-		background: url(/Images/InnerRectangleRepeat.gif) repeat-y;
+		background: url(/images/InnerRectangleRepeat.gif) repeat-y;
 	}
 		#VistaPresalesPage #innerBoxTop
 		{
 			position:relative;
-			background: url(/Images/InnerRectangleTop.jpg) no-repeat;
+			background: url(/images/InnerRectangleTop.jpg) no-repeat;
 			width:580px;
 			height:256px;
 		}
@@ -2728,7 +2728,7 @@ div#ifaContent {
 		}
 		#VistaPresalesPage #innerBoxBottom
 		{
-			background: url(/Images/InnerRectangleBottom.gif) bottom left no-repeat;
+			background: url(/images/InnerRectangleBottom.gif) bottom left no-repeat;
 			width:575px;
 			height:42px;
 		}
@@ -2802,7 +2802,7 @@ div#ifaContent {
 	{
 		margin:0px 56px 0px 70px;
 		padding:3px 25px 20px 24px;
-		background: url(/Images/OuterRectangleBottom.gif) bottom left no-repeat;
+		background: url(/images/OuterRectangleBottom.gif) bottom left no-repeat;
 		height:39px;
 	}
 	#VistaPresalesPage #VistaBackground div[id='contentsBottom']
@@ -2851,19 +2851,19 @@ div#ifaContent {
 					margin:0px;
 				}
 .VistaButton {
-	background-image:url(/Images/ButtonRight.gif);
+	background-image:url(/images/ButtonRight.gif);
 	margin-bottom:40px;
 }
 	.VistaButton .ButtonOuter {
-		background-image:url(/Images/ButtonLeft.gif);
+		background-image:url(/images/ButtonLeft.gif);
 		padding:9px 0px 0px 0px;
 	}
 		.VistaButton .ButtonMiddle {
-			background-image:url(/Images/ButtonLeft.gif);
+			background-image:url(/images/ButtonLeft.gif);
 			padding:0px 0px 0px 6px;
 		}
 			.VistaButton .ButtonInner {
-				background-image:url(/Images/ButtonRight.gif);
+				background-image:url(/images/ButtonRight.gif);
 				padding:0px 10px 4px 0px;
 			}
 			.VistaButton .ButtonText {
