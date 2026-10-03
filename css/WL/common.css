@@ -1,0 +1,2872 @@
+	/*
+	*  Basic concepts
+	*  The document is built from the top down with the idea that any
+	*  element in the document can be removed and the flow of the document
+	*  will fill in the gap and work. 
+	*  To be consistent all elements apply bottom margin or top padding 
+	*  to push down on the elements below them and no elements have top 
+	*  margins or bottom padding.
+	*  The exception to the above is negative top margins to elements
+	*  that contain text, this is an attempt to remove the space caused
+	*  by line-height. Trying to remove the line-height itself causes 
+	*  display problems in IE.
+	*/
+	/*
+	*  Colors
+	*  white       #FFF
+	*  orange      #F73C1F
+	*  dark grey   #333    -   text color
+	*  light grey  #666    -   footnote text
+	*  light blue  #D8E6F8 -   borders
+	*              #B7D3ED -   horizontal rules within content
+	*  med blue    #0088E4 -   Blue text (hyperlinked or otherwise)
+	*/
+	/*
+	*  Genarel
+	*************************************************/
+	/*  
+	*  Set basic font/size and color. The base font size is 0.7em or 
+	*  0.7 times the width of the capital letter 'M'. Default font size
+	*  on all browsers in our matrix is 16px. We scale the font size for
+	*  each element using % throughout the document. Base size is not 
+	*  defined in px here because IE will not allow fonts styled in px to scale, 
+	*  causing accessibility issues for users with visual impairment.
+	*/
+	body {
+		font:normal normal normal 0.7em Verdana, sans-serif;
+		margin:0px;
+		padding:0px;
+		color:#333;
+	}
+	#pageBackground {
+		margin:0px;
+		padding:0px;
+		text-align:center;	/*	IE will center page	*/
+		min-width: 773px;	/*	Make sure page doesn’t disappear off the left side when browser window is made to small	*/
+		background:#FFF url(/Images/wl_merch_repeat.jpg) top center repeat-x;
+	}
+	.page {
+	/*  
+	 *  center in browser, this method is used for IE 5.5's sake
+	 *  http://bluerobot.com/web/css/center2.html
+	 */
+		width:773px;    /*  width of page   */
+		padding:0px;
+		text-align: left;
+		margin-left: auto;	/*	center page in FF	*/
+		margin-right: auto;
+	}
+	/*  needed to apply proper font size to Headers in IE */
+	h1,h2,h3,h4,h5,h6 {
+		font:normal normal normal 0.7em Verdana, sans-serif;
+	}
+	/* 
+	*  IE 5.5 messes up font sizes, I set the size back to normal in the
+	*  table and to the used 0.7em in the td
+	*/
+	table {
+		font-size: medium;
+	}
+	th,td {
+		font-size: 0.7em;
+	}
+
+	p {
+		margin:-2px 0px 14px 0px;
+	}
+	a:link {
+		text-decoration:none;  
+	}
+	/*
+	*  Link hovers
+	*/
+	a:visited {
+		text-decoration:none;   
+	}
+	a:hover {
+		text-decoration:underline;
+	}
+	a:active {
+		text-decoration:underline;   
+	}
+	/*  
+	*  An invisible link for customers with screen readers, it will 
+	*  allow them to skip ahead to the content of the page. Position
+	*  absolute removes it from the flow of the document, so it will
+	*  not interfere with normal layout.
+	*/
+	#skipToContent {
+		position:absolute;  
+	}
+
+	/*
+	*  head    includes everything above the content
+	*************************************************/
+	#head {
+		margin:0px;
+		background:url(/Images/wl_merch_head.jpg) top center no-repeat;
+		padding:6px 0px 20px 0px;
+	}
+	/*
+	*  Header
+	*************************************************/
+	#Header {
+		font-size:150%;
+		margin:7px 0px 20px 40px;
+		color:#FFF;
+	}
+	/*
+	 *	Sign Out
+	 ***********************************************/
+	.signOut {
+		float:right;
+		color:#FFF;
+	}
+	/*
+	*  Breadcrumb_Bar
+	************************************************/
+	#Breadcrumb_Bar {
+		font-size:100%;
+		margin:20px 0px 0px 0px;
+		padding:3px 0 3px 8px;
+	}
+		#Breadcrumb_Bar a, #Breadcrumb_Bar span {
+			/* Configurable by authors (see section 2.2.1 of V3 templates & schema spec
+			font-weight:bold;*/
+			color:#333;
+		}
+		.breadcrumbarrow {
+			vertical-align:top;
+			margin:3px 12px 0px 13px;
+		}
+
+	/*
+	*  pageTitles
+	*************************************************/
+	#pageTitles {
+		width:100%;
+		padding:14px 0px 0px 8px;
+	}
+		#Page_Title {
+			font-size:150%;
+			font-weight:normal;
+			color:#333;
+			margin:-4px 0px 8px 0px;
+			padding:0px;
+		}
+
+		#Page_Subtitle {
+			font-size:100%;
+			color:#333;
+			margin:-4px 0px 14px 0px;
+			padding:0px;
+		}
+			/*
+			 *  In case no title elements are included in the page, maintain the
+			 *  space, so the photo banner dosen't colapse on the Breadcrumb Bar
+			 */
+			.noTitle {
+				height:30px;
+			}
+
+	/*
+	 *  Photo_Banner
+	 ********************************************/
+
+	#Photo_Banner {
+		display:block;
+		margin:0px 0px 14px 0px;
+	}
+
+	/*
+	 *  content
+	 *******************************************/
+	.content {
+		margin:0px;
+		padding:0px 8px 0px 8px;
+	}
+		#contentTopControls {
+			position:relative;
+			width:717px;
+			margin:0px 15px 0px 15px;
+		}
+			/*
+			 *  These styles can be applied to the contentTopControls <div>
+			 *  in depending on the exsistance of elements inside it. They
+			 *  help it maintain the space between the head and the bulk of
+			 *  the content.
+			 */
+			.empty {
+				padding:0px;
+				height:35px;
+			}
+			.full {
+				padding:14px 0px 0px 0px;
+			}
+			.tabAndButton {
+				padding:14px 0px 0px 0px;
+			}
+			.suiteAndButton {
+				padding:14px 0px 0px 0px;
+			}
+			.suiteAndButton .buttonBox {
+				padding:0px;
+				margin-bottom:0px;
+			}
+			.tabNoButton {
+				padding:35px 0px 0px 0px;
+				margin:0px 15px 0px 15px;
+			}
+			.suiteNoButton {
+				padding:0px 0px 35px 0px;
+				margin:0px 15px 0px 15px;
+			}
+			.suiteAndTabNoButton {
+				padding:35px 0px 0px 0px;
+				margin:0px 15px 0px 15px;
+			}
+		#Suite_Link {
+			position:relative;
+			float:right;
+			text-align:right;
+			margin:0px;
+			font-size:100%;
+			color:#F73C1F;
+		}
+			.withTabBar {
+				width:300px;
+			}
+			#Suite_Link a {
+				color:#F73C1F;
+			}
+		 .suiteNoButton #Suite_Link {
+			position:absolute;
+			bottom:0px;
+			right:0px;
+		}
+			.Offer {
+				color:#F73C1F;
+				font-size:127%;
+				font-weight:bold;
+				position:relative;
+				top:7px;
+				left:5px;
+			}
+				.withPlanDetails {
+					top:0px;
+					left:5px;
+				}
+			.planDetails {
+				position:relative;
+				top:10px;
+				left:5px;
+				color:#0088E4;
+			}
+				.withOffer {
+					top:0px;
+				}
+		#Tab_Control {
+			font-size:100%;
+			color:#646464;
+			margin:0px;
+			float:left;
+		}
+			.withSuiteLink {
+				width:410px;
+			}
+			#Tab_Control a {
+				color:#646464;
+			}
+		.postTabSuit {
+			overflow: hidden;
+			clear: both;
+			/*  in order to hide float element  */
+			height: 5px;
+			margin: 0px;
+			font-size: 1px; 
+			line-height:1px;
+		}
+		/*
+		*  The box is a container the holds the bulk of the content. There can by multiple
+		*  boxes, but the mainBox is used if it is the main page content.
+		*/
+		.box {
+			margin:0px;
+			padding:14px 14px 0px 14px;
+			border:1px solid #D8E6F8;
+			clear:both;
+		}
+
+		#mainBox { 
+			/* explicit demention needs to be declared to avoid IE peek-a-boo redering bug   */
+			width:752px;
+			/*  Tantek's box modle hack in order to keep IE 5.5 in line
+			 *  http://www.tantek.com/CSS/Examples/boxmodelhack.html
+			 *  Basicly IE 5.5 dosn't recognize the '\' character as an escape charater
+			 *  the value above will be applied, then the next two line will trick
+			 *  trick IE 5.5 into thinking the rule has ended, then the real value overwrites
+			 *  the IE 5.5 value
+			 *  I have not put in the be kind to Opera 5 rule as Opera is not in our matrix and it's old
+			 */
+			voice-family: "\"}\""; 
+			voice-family:inherit;
+			width:725px; 
+		}
+			/*
+			 *	If the Button offer appears without text in it, it will cause the whole button to disappear. 
+			 *	This is the peek-a-boo bug in IE, explicitly adding width is a fix for this bug.
+			 */
+			#mainBox  .buttonBox {
+				width:100%;
+			}
+		/*  h1 and h2 are reserved for page titles, these are used in page content  */
+		h3 {
+			font-size:127%;
+			color:#333;
+			margin:0px 0px 14px 0px;
+			padding:0px;
+		}
+		h4 {
+			font-size:100%;
+			color:#333;
+			font-weight:bold;
+		}
+		.tooltip {
+			color:#000;
+			position:absolute;
+			display:none;
+			background: #FFFFE5;
+			border:1px solid #333;
+			padding:3px;
+			z-index:100;
+		}
+		/*  The clear container is used to clear floats. After elements have been 
+		 *  floated, they must be cleared in order to return to normal layout.
+		 */
+		.clear {
+			overflow: hidden;
+			clear: both;
+			/*  in order to hide float element  */
+			height: 1px;
+			margin: -1px 0px 0px 0px;
+			font-size: 1px;   
+		}
+		/* 
+		 *  Clear with space after if
+		 *	Firefox doesn’t auto clear, so this clears the button and 
+		 *	adds the padding at the bottom of the box 
+		 */
+		.clearAndPad {
+			overflow: hidden;
+			clear: both;
+			height: 1px;
+			margin: -1px 0px 14px 0px;
+			font-size: 1px; 
+			margin:0px 0px 14px 0px;   
+		}
+		.Footnote {
+			color:#666;
+			font-size:80%;
+			margin:0px;
+			padding:0px 0px 14px 0px;
+		}
+
+
+	/*
+	*  Footer      This will be handled by another team
+	*******************************************/
+	#Footer {
+		margin:24px 0px 0px 0px;
+		clear:both;
+		border-top:1px solid #D8E6F8;
+	}
+		#Footer a {
+			color:#333;
+		}
+		#leftFooter {
+			display:block;
+			width:450px;
+			float:left;
+			text-align:left;
+			vertical-align:middle;
+			padding:4px 0px 12px 14px;
+		}
+		#rightFooter {
+			display:block;
+			width:290px;
+			float:right;
+			text-align:right;
+			vertical-align:middle;
+			padding:6px 14px 12px 0px;
+		}
+		.footerSep {
+			padding:0em .7em;
+			vertical-align:middle;
+		}
+/*
+ *	The Modules Framework is a layout system that will allow you to place 
+ *	diffrent sized boxes next to each other in rows. Place small(third), quarter,
+ *	medium(half), or large(two thirds) width boxes on rows, and you need to clear
+ *	each row. This is done by placing a <div class="clear"></div> between rows.
+ */
+#modulesFrame {
+		margin:0px;
+		padding:0px;
+	}
+	/*  1/3 the width of the row    */
+	.smallModule {
+		padding:0px;
+		margin:0px;
+		float:left;
+		width:33%;
+	}
+	/*  1/4 the width of the row    */
+	.quarterModule {
+		padding:0px;
+		margin:0px;
+		float:left;
+		width:25%;
+	}
+	/*  1/2 the width of the row    */
+	.mediumModule {
+		padding:0px;
+		margin:0px;
+		float:left;
+		width:49%;
+	}
+	/*  2/3 the width of the row    */
+	.largeModule {
+		padding:0px;
+		margin:0px;
+		float:left;
+		width:66%;
+	}
+		.Category_Inventory {
+			margin:14px;
+		}
+		.Category_Name {
+			margin:-2px 0px 8px 0px;
+			font-size:127%;
+		}
+			.Category_Name a {
+				color:#0088E4;
+			}
+		.Description {
+			margin:-2px 0px 8px 0px;
+		}
+		.Category_Icon {
+			float:right;
+		}
+		.Service {
+			list-style:none;
+			margin:0px;
+			padding:0px;
+		}
+			.Service .Name {
+				margin:0px;
+				padding:0px;
+				font-weight:normal;
+			}
+				.Service .Name a {
+					color:#646464;
+				}
+			.Service .viewAll {
+				margin:8px 0px 0px 0px;
+				padding:0px;
+			}
+				.Service .viewAll a {
+					color:#0088E4;
+				}/*
+ *  Service Boxes are UI Modules that come in small, meduim and large size.
+ *  They are ment to be placed inside module framework.
+ */
+.ServiceBox {
+	margin:12px 14px 12px 14px;
+	position:relative;
+	/*
+	 *  Border removes dispaly bug in IE, the color match the page background color
+	 *  in order to hide it.
+	 */
+	border:1px solid #FFF;
+}
+	.ServiceBox .Name {
+		color:#0088E4;
+		padding:0px;
+		margin:-2px 0px 8px 0px;
+		font-size:127%;
+		font-weight:bold;
+	}
+		.ServiceBox .Name a {
+			color:#0088E4;
+			text-decoration:none;
+		}
+	/*
+	 *  two diffrent methods are used to position the icon in the left corner
+	 *  a absolute position is used for large and medium service boexes, this
+	 *  needed because IE 6.0 offsets the Description text below the Icon a few
+	 *  pixels. But the small service box needs to have the float applied because
+	 *  the description text follows it insted of being beside it. The float keeps
+	 *  the icon from overlaying the text.
+	 */ 
+	.ServiceBox .Category_Icon {
+		float:left;
+		position:absolute;
+		top:0px;
+		left:0px;
+		margin:0px;
+		padding:0px;
+	}
+	.smallModule .ServiceBox .Category_Icon {
+		position:relative;
+		float:left;
+	}
+		.ServiceBox .Category_Icon img {
+			margin:0px;
+			padding:0px;
+		}
+		/*  FREE badge  */
+		.ServiceBox .Badge {
+			position:absolute;
+			color:#FF6600;
+			background:#FFF;
+			padding:0px 2px 0px 2px;
+			bottom:13px;
+			right:24px;
+			font-weight:bold;
+			font-size:127%;
+		}
+	.smallModule .ServiceBox .Description {
+		clear:left;
+		margin:-2px 0px 14px 0px;
+	}
+ 
+/*
+ *	The buttonBox is a container that buttons are placed into
+ *	in order to provide better control over the space around
+ *	them and their expantion length
+ */
+/*
+ *	<a href="http://www.live.com" class="Button CTAButton">
+ *		<strong class="ButtonOuter">
+ *			<span class="ButtonMiddle">
+ *				<span class="ButtonInner">
+					<span class="ButtonText">
+ *						[Button Text]
+					</span>
+ *				</span>
+ *			</span>
+ *		</strong>
+ *	</a>
+ */
+/* the button box is used to close in the button with other elements, such as the offer */
+.buttonBox {
+	margin:0px 0px 14px 0px;
+}
+/*	when inside the button box, the button should not have a 14px bottom margin, the
+	button box itself takes care of this.*/
+.buttonBox .Button {
+	margin:0px;
+}
+.Button {
+	font-size:127%;
+	color:#FFF;
+	text-decoration:none;
+	display:block;
+	padding:0px;
+	margin:0px 0px 14px 0px;
+	float:left;	/* by default a button will align left */
+	background:top right no-repeat;
+	margin:0px;
+}
+/*	we don't want the button text to get underlined when the user mouses over it, which is the 
+	normal behaviour for links, and the button is just a fancy link after all */
+.Button:active {
+	text-decoration:none;
+}
+.Button:hover {
+	text-decoration:none;
+}
+/*	centering the button happens diffrently in IE and standards complient browsers
+	in IE we set the display to inline-block and text-align center the parent element
+	in Standards complient browsers text-align will not work, so we set the left and right
+	margin to auto, this is the correct way to center a block level element */
+.ButtonCenter {
+	float:none;
+	display:inline-block;
+	text-align:left;
+	margin:0px auto 0px auto;
+}
+/*	because of order of presidence, the .buttonBos .Button rule above will overide the rule 
+	we just used to set margins to auto when the button is in a button box, here we re-set that
+	for when our button is in the button box specificly. */
+.buttonBox .ButtonCenter {
+	margin:0px auto 0px auto;
+}
+/*	Firefox dose not understnd inline-block, but dose know display:table. IE dose not understand
+	attribute selectors, here we are telling any <a> element with a space seporated list of class
+	names containing 'ButtonCenter' to display:table. */
+a[class~='ButtonCenter'] {
+	display:table;
+}
+/* add this class name to the button to align it right */
+.ButtonRight {
+	float:right;
+}
+/*	The CTA (Call To Action) button is the normal one we use on the merchendising site
+	it is orange. IF we want to create other types of buttons, we only need to copy all
+	the styles applied to .CTAButton and change the class name and image, the structure 
+	of the button is defined more genericly. each button should have it's class defined
+	as: "Button [name] [alignment]" with [name] being the name of that style of button
+	and [alignment] being ButtonRight or ButtonCenter. */
+.CTAButton {
+	background-image:url(/Images/Button_Right.gif);
+}
+	.ButtonOuter {
+		display:block;
+		padding:9px 0px 0px 0px;
+		margin:0px;
+		background:top left no-repeat;
+	}
+	.CTAButton .ButtonOuter {
+		background-image:url(/Images/Button_Left.gif);
+	}
+		.ButtonMiddle {
+			display:block;
+			padding:0px 0px 0px 10px;
+			margin:0px;
+			background:bottom left no-repeat;
+		}
+		.CTAButton .ButtonMiddle {
+			background-image:url(/Images/Button_Left.gif);
+		}
+			.ButtonInner {
+				display:block;
+				padding:0px 10px 4px 0px;
+				margin:0px;
+				background:bottom right no-repeat;
+			}
+			.CTAButton .ButtonInner {
+				background-image:url(/Images/Button_Right.gif);
+			}
+				.ButtonText {
+					line-height:0.889em;
+					display:block;
+					padding:0px 0px 5px 0px;
+					margin:0px;
+				}
+
+
+/* For <a> tags that look like HIG Buttons
+ * The HIG defined css for buttons using the button tag, but we do it a litte diffrent
+ *  because most of our Buttons are actuly links and the <button> tag
+ * dose not do anything on it's own, only when used with JavaScript */
+
+/*	this is the normal HIG button, color blue */
+.HIGButton:link,.HIGButton:visited {
+	display:block;
+	font-family: Verdana;
+	padding:5px;
+	background: #F1F1F1 url(/Images/HigButton_Default.gif) center repeat-x ;
+	border:1px solid #00156E; 
+	color:#00156E;
+	font-size: 95%;
+	vertical-align:middle; 
+}
+
+.HIGButton:active { 
+	background: #B7D8ED url(/Images/HigButton_Pressed.gif) center repeat-x ;
+	text-decoration:none;
+}
+.HIGButton:hover { 
+	background:url(/Images/HigButton_Hot.gif) center repeat-x ;
+	text-decoration:none;
+}
+
+/* Accentuated, this button is green*/
+.Accentuated:link,.Accentuated:visited {
+	background:url(/Images/HigButton_Rest_Accentuated.gif) center repeat-x ;
+	border-color:#1AAB1F;
+}
+.Accentuated:active {
+	background:#9EEE8D url(/Images/HigButton_Pressed_Accentuated.gif) center repeat-x ;
+	border-color: #1AAB1F;
+}
+.Accentuated:hover {
+	border-color: #54CE43;
+	background-color:#54CE43;
+}
+/* Commerce, this button is orange, it is similare to the call to action button*/
+.Commerce:link,.Commerce:visited {
+	background:url(/Images/HigButton_Rest_Commerce.gif) center repeat-x ;
+	border-color: #C57000;
+}
+.Commerce:active  {
+	background:#FFAB7C url(/Images/HigButton_Pressed_Commerce.gif) center repeat-x ;
+	background-color:#FFAB7C;
+}
+.Commerce:hover {
+	border-color: #F07522;
+	background:#F07522;
+}
+/* for aligning the HIG buttons */
+.HIGRight {
+	float:right;
+}
+.HIGLeft {
+	float:left;
+}/*
+ *	Feature list
+ */
+#Features {
+	margin:0px;
+	padding:0px;   
+	list-style:none;
+}
+.Feature {
+	margin:0px;
+	padding:0px; 
+	position:relative;
+	/*
+	 *	Border removes dispaly bug in IE, the color match the page background color
+	 *	in order to hide it.
+	 */
+	b\order:1px solid #FFF;
+}
+.Feature .Icon {
+	position:relative;
+	float:left;
+	p\osition:absolute;
+	t\op:0px;
+	/*
+	 *	Fix for rendering bug in IE 5.5 using the simple box modle hack
+	 *	the style for IE 5.5 is writen inline, the important rule over-rides it for
+	 *	other browsers
+	 */
+	lef\t:0px !important;
+
+}
+#Features .Suit .Name {
+	font-size:100%;
+	font-weight:bold;
+	color:#0088E4;
+	padding:0px;
+	margin:-2px 0px 8px 0px;
+}
+#Features .Suit .Name a {
+	color:#0088E4;
+}
+#Features .Suit .Short_Description {
+	padding:0px;
+	margin:-2px 0px 14px 0px;
+}
+#Features .Standard .Name {
+	font-weight:bold;
+	margin:-2px 0px 0px 0px;
+}
+#Features .Standard .Short_Description {
+	padding:0px;
+	margin:0px 0px 14px 0px;
+}
+.Feature .Learn_More_Link {
+	color:#0088E4;
+}div#ifa {
+	float: right;
+	width: 338px;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+div#ifaContent {
+	position: absolute;
+	top: 144px;
+	left:170px;
+	display:none;
+	z-index: 20;
+}/*
+ *	Pseudo Table is used when you want a grid layout with columns and rows, but do not 
+ *	want to use an HTML <table> for semantic reasons.  It is a structure made up of 
+ *	<div>’s with rows and cells set to specific widths to look like columns. The pseudo table 
+ *	also wraps it’s columns with an outline, so they look like columns of information, but 
+ *	rows line up as well.
+ *	The borders are created using background images in order to ensure that they are the same 
+ *	height and don’t vary in height based on there content.
+ */
+
+#pseudoTable {
+		background-repeat:repeat-y;
+		width:756px;
+		margin:0px;
+		padding:0px;
+
+	}
+		/*	There are 1 to 5 posible columns, 1 column simply have a border around the box	*/
+		.columns_5 {
+			background: url(/Images/borders_5.gif);
+		}
+		.columns_4 {
+			background: url(/Images/borders_4.gif);
+		}
+		.columns_3 {
+			background: url(/Images/borders_3.gif);
+		}
+		.columns_2 {
+			background: url(/Images/borders_2.gif);
+		}
+			#pseudoTable .topBottom {
+				background-repeat:no-repeat;
+				line-height:0px;
+				overflow:hidden;
+				margin:0px;
+				padding:0px;
+				height:1px;
+				clear:both;
+			}
+				.columns_5 .topBottom {
+					background: url(/Images/topBottom_5.gif);
+				}
+				.columns_4 .topBottom {
+					background: url(/Images/topBottom_4.gif);
+				}
+				.columns_3 .topBottom {
+					background: url(/Images/topBottom_3.gif);
+				}
+				.columns_2 .topBottom {
+					background: url(/Images/topBottom_2.gif);
+				}
+			#pseudoTable .column {
+				padding:0px;
+				margin:0px 5px 0px 0px;
+				float:left;
+				overflow:hidden;
+				text-align:center;
+			}
+			#pseudoTable .last {
+				margin:0px;   
+			}
+				/*	widths are based on a 773px wide page with 8px margins on each side	*/
+				.columns_5 .column {
+					width:147px;
+				}
+				.columns_5 .last {
+					width:148px;
+				}
+				.columns_4 .column {
+					width:185px;
+				}
+				.columns_4 .last {
+					width:186px;
+				}
+				.columns_3 .column {
+					width:248px;
+				}
+				.columns_3 .last {
+					width:249px;
+				}
+				.columns_3 .first {
+					width:249px;
+				}
+				 .columns_2 .column {
+					width:375px;
+				}
+				.columns_2 .last {
+					width:376px;
+				}
+			.columns_1 {
+				width:100%;
+				border:1px solid #D8E6F8;
+				overflow:hidden;
+				margin:0px;
+				background:#FFF;
+			}
+				.columns_1 .column {
+					width:100%;
+					overflow:hidden;
+					margin:0px;
+				}
+					#pseudoTable .pseudoCell {
+						text-align:center;
+						padding:0px;
+						overflow:hidden;
+					}#MX_AllServicesPage .box {
+	margin:0px;
+}
+#MX_AllServicesPage .Name {
+	margin-bottom: 8px;
+}
+#MX_AllServicesPage .Service {
+	margin-top: -4px;
+}
+#MX_AllServicesPage .Service a {
+	color:#333333;
+}
+#MX_AllServicesPage .box {
+	padding: 0px;
+}
+#MX_ServiceOverviewPage #overview {
+	float:left;     /*  place the overview in the first column  */
+	margin:0px;
+}
+#MX_ServiceOverviewPage .withIFA {
+	width:373px;
+}
+#MX_ServiceOverviewPage #ScreenshotIFA {
+	float:right;
+}
+#MX_ServiceOverviewPage #ScreenshotIFA img {
+	border:0px none #FFF;
+}#MX_ServiceFeaturesPage #description {
+	float:left;   
+	width:392px;
+}
+	#MX_ServiceFeaturesPage #description h3 {
+		margin:-2px 0px 14px 0px;
+		padding:0px;
+	}
+
+	#MX_ServiceFeaturesPage .Main_Description {
+		margin:-2px 0px 0px 0px;
+		padding:0px;
+	}
+#MX_ServiceFeaturesPage .quickLinks {
+	float:left;
+	width:315px;
+	margin:0px 0px 0px 14px;
+}
+	#MX_ServiceFeaturesPage .quickLinks h4 {
+		margin:0px 0px 16px 0px;
+	}
+	#MX_ServiceFeaturesPage .quickLinks ul {
+		list-style:none;
+		margin:-2px 0px 0px 0px;
+		padding:0px;
+	}
+	#MX_ServiceFeaturesPage .quickLinks li {
+		margin:0px;
+		padding:0px;
+	}
+	#MX_ServiceFeaturesPage .quickLinks a {
+		color:#333;
+	}
+ #MX_ServiceFeaturesPage #features {
+	margin:0px 0px 8px 0px;
+	padding:14px 0px 0px 0px;
+ }
+	#MX_ServiceFeaturesPage .Feature {
+		margin:0px 0px 8px 0px;
+		border-top:1px solid #B7D3ED;
+		clear:left;
+		width:727px;	/* explicit dimension needs to be declared to avoid IE peek-a-boo redering bug   */
+	}
+		#MX_ServiceFeaturesPage .Feature .backToTop {
+			color:#0088E4;
+			float:right;
+			font-size:92%;
+			/*	exception to the no-margin to rule to make the spacing work with the float   */
+			margin:7px 0px 8px 0px;
+			width:170px;
+			text-align:right;
+		}
+		#MX_ServiceFeaturesPage .Feature .Name {
+			margin:8px 0px;
+			padding:0px;
+			width:550px;
+			color:#333;
+		}
+		#MX_ServiceFeaturesPage .Long_Description {
+			margin:-2px 0px 0px 0px;
+		}
+		#MX_ServiceFeaturesPage .Feature .withImg {
+			position:relative;
+			left:8px;
+		}
+		#MX_ServiceFeaturesPage .Feature img {
+			clear:right;
+			float:left;
+			padding:0px 8px 0px 0px;
+		}
+		#MX_ServiceFeaturesPage .last {
+			margin:0px 0px 14px 0px;
+		}
+	#MX_ServiceFeaturesPage .links {
+		margin:4px 0px 0px 0px;
+	}
+	#MX_ServiceFeaturesPage .links a {
+		color:#0088E4;
+	}
+#MX_ServiceRequirementsPage #Requirements_Description {
+	margin:0px 0px 24px 0px;
+}
+#MX_ServiceRequirementsPage #requirements {
+	width:100%;
+	margin:0px 0px 14px 0px;
+} 
+	#MX_ServiceRequirementsPage #Component_Title,#MX_ServiceRequirementsPage #Requirement_Title {
+
+		font-weight:bold;
+		text-align:left;
+		padding:0px 0px 8px 0px;
+		vertical-align:bottom;
+	}
+	#MX_ServiceRequirementsPage #requirements td {
+		border-top:1px solid #B7D3ED;
+		padding:8px 0px;
+		vertical-align:top;
+		padding:8px 8px 8px 0px;
+	}
+	#MX_ServiceRequirementsPage .Component {
+		width: 150px;
+	}#MX_ServiceFAQPage #faqs{
+	margin:24px 0px 14px 0px;
+}
+	#MX_ServiceFAQPage .horzLine {
+		border-bottom:1px solid #B7D3ED;
+		height:0px;
+		margin:8px 0px;
+		padding:0px;
+		width:615px;
+		line-height:0px;
+		font-size:0px;
+	}
+	#MX_ServiceFAQPage .FAQ_Title {
+		margin:0px 0px 0px 0px;
+		padding:0px 0px 5px 0px;
+		font-weight:bold;
+	}
+	#MX_ServiceFAQPage .FAQ_Text {
+		margin:0px;
+		padding:0px;
+	}
+	#MX_ServiceFAQPage .FAQ_Title:first-line {
+		line-height:0.7em;
+	}#MX_PlanDetailsPage #Plan_Details_Title {
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
+#MX_PlanDetailsPage #Plan_Details_Subtitle {
+	color:#646464;
+	padding:0px;
+	margin:0px 0px 14px 0px;
+}
+#MX_PlanDetailsPage .Plan_Details {
+	margin:0px 0px 14px 0px;
+}#MX_HomePage #headTop {
+	border:0px none #FFF;
+}
+
+#MX_HomePage #banner {
+	height:170px;
+	position:relative;
+	padding:0px;
+	margin:0px 0px 8px 0px;
+}
+	#MX_HomePage #bannerTitles {
+		position:absolute;
+		top:36px;
+		left:22px;
+		width:330px;
+		z-index:100;
+		margin:0px;
+		padding:0px;
+	 }
+		#MX_HomePage #Banner_Title {
+			font-size:167%;
+			font-weight:bold;
+			color:#333;
+			margin:0px 0px 8px 0px;
+			padding:0px;
+		}
+		#MX_HomePage #Banner_Subtitle {
+			font-size:100%;
+			color:#333;
+			margin:-2px 0px 0px 1px;
+			padding:0px;
+		}
+#MX_HomePage #Breadcrumb_Bar {
+	padding:3px 0 6px 22px; 
+}
+#MX_HomePage #mainBox {
+	width:755px;	/* explicit demention needs to be declared to avoid IE peek-a-boo redering bug   */
+}
+#MX_HomePage .box {
+	padding:0px;
+	position:relative;
+	background:#FFF url(/Images/bg.gif) repeat-y;
+}
+	#MX_HomePage #modulesFrame {
+		width:598px;     
+		float:left;
+	}
+	#MX_HomePage #Special_Offers {
+		float:right;
+		width:134px;
+		padding:14px 8px;
+	}
+		#MX_HomePage #Special_Offers #Title {
+			margin:-2px 0px 8px 0px;
+		}
+		#MX_HomePage #specialOffers {
+			list-style:none;
+			margin:0px;
+			padding:0px;
+		}
+			#MX_HomePage #specialOffers li {
+				margin:0px;
+				padding:0px;
+				width:134px;
+			}
+				#MX_HomePage .Offer_Title {
+					display:block;
+					margin:-2px 0px 8px 0px;
+					padding:0px;
+				}
+				/*  Service label   */
+				#MX_HomePage .label {
+					color:Red;   
+				}
+				#MX_HomePage .Offer_Link {
+					display:block;
+					margin:-2px 0px 0px 0px;
+					padding:0px 0px 14px 0px;
+					color:#0088E4;
+				}
+				#MX_HomePage .View_All_Text:first-line {
+					line-height:0.7em;
+				}
+				#MX_HomePage .View_All_Text {
+					color:#0088E4;
+				}
+				#MX_HomePage .Suite_Page{
+					color:#0088E4;
+					margin:0px 0px 8px 0px;
+				}
+#MX_CategoryPage .box {
+	padding:0px;
+}
+/*
+ *  content
+ *******************************************/
+#MX_GBBPage #content {
+	margin:39px 8px 38px 8px;
+}
+#MX_GBBPage #compairisonTable {
+	border-collapse:collapse;
+	width:757px;
+}
+#MX_GBBPage #compairisonTable .buttonBox{
+	text-align:center;
+}
+#MX_GBBPage #compairisonTable table.buttonTable {
+	 margin:0px auto 0px auto;
+	 padding:0px;
+	 float:none;
+}
+#MX_GBBPage td,#MX_GBBPage th  {
+	border-left:1px solid #D8E6F8;
+	border-right:1px solid #D8E6F8;
+	text-align:center;
+	padding:0px 14px 0px 14px;
+}
+
+#MX_GBBPage .postTH {
+	height: 1px;
+	margin: -1px 0px 0px 0px;
+	font-size: 1px; 
+}
+#MX_GBBPage td {
+	padding-bottom:14px;
+}
+#MX_GBBPage thead td,#MX_GBBPage tfoot td {
+	padding-bottom:0px;
+}
+#MX_GBBPage .spacer {
+	padding:0px;
+}
+#MX_GBBPage #Main_Text {
+	margin:0px 0px 14px 0px;   
+}
+#MX_GBBPage td.getit  {
+    
+}
+#MX_GBBPage th  {
+	vertical-align: top;    
+}
+#MX_GBBPage .links {
+	color:#666;
+	font-size:100%;
+	font-weight:normal;
+	margin:0px 0px 8px 0px;
+}
+#MX_GBBPage .links a {
+	color:#0088E4;
+}
+#MX_GBBPage ul, #MX_GBBPage ol {
+	padding-left:14px;
+	margin-left:0px;
+}
+#MX_GBBPage #compairisonTable th {
+	background:#F1F6FC;
+	padding:3px 0px 2px 0px;
+}
+#MX_GBBPage #compairisonTable th.featureColumn {
+	padding-left:14px;
+	font-weight:normal;
+}
+#MX_GBBPage #compairisonTable .summary {
+	border-top:1px solid #D8E6F8;
+	background:transparent;
+	vertical-align:top; 
+	padding:14px 14px 0px 14px;
+}
+#MX_GBBPage h4.Name {
+	margin:-2px 0px 8px 0px;  
+	color: #333;
+}
+#MX_GBBPage #compairisonTable .getit {
+	border-bottom:1px solid #D8E6F8;
+}
+#MX_GBBPage #compairisonTable .featureColumn {
+	text-align:left;
+}
+#MX_GBBPage #compairisonTable .buttonBox {
+	float:none;
+	margin:0px auto 8px auto;
+}
+#MX_GBBPage #compairisonTable .buttonTable {
+	 margin:0px auto 0px auto;
+	 padding:0px;
+}
+#MX_GBBPage .buttonTable td {
+	border:0px none #FFF; 
+	margin:0px;  
+	padding:0px;
+}
+#MX_GBBPage .Offer_cell {
+	vertical-align: top;
+}
+#MX_GBBPage .Offer_foot_cell {
+	vertical-align: bottom;
+}
+#MX_GBBPage .Offer {
+	display:block;
+	color:#F73C1F;
+	margin:-2px 0px 8px 0px;
+	top:0px;
+	left:0px;
+}
+#MX_GBBPage .Product_Description_cell {
+	vertical-align: top;
+}
+#MX_GBBPage .Product_Description {
+	margin:-2px 0px 14px 0px;
+	text-align: left;
+}
+/* SGH: The GBB page doesn't have a div with class of box, so I created this container to apply the correct
+	padding to footnote(s) */
+#MX_GBBPage .footerBox {
+	margin:0px;
+	padding:14px 14px 0px 14px;
+}#MX_ServiceMultiOfferPage #mainBox {
+	margin-bottom:5px;
+}
+/* table style */
+#multiOfferTable {
+	table-layout:fixed;
+	border-collapse:collapse;
+	width:756px;
+}
+#MX_ServiceMultiOfferPage .offers_1 {
+	border:1px solid #D8E6F8;
+}
+#MX_ServiceMultiOfferPage .offers_2 {
+	background:url(/Images/topBottom_2.gif) top left repeat-y;
+}
+#MX_ServiceMultiOfferPage .offers_3 {
+	background:url(/Images/topBottom_3.gif) top left repeat-y;
+}
+#MX_ServiceMultiOfferPage .offers_4 {
+	background:url(/Images/borders_4.gif) top left repeat-y;
+}
+#MX_ServiceMultiOfferPage .offers_5 {
+	background:url(/Images/topBottom_5.gif) top left repeat-y;
+}
+	/* table body style */
+	#MX_ServiceMultiOfferPage .offers_1 tbody {
+
+	}
+	#MX_ServiceMultiOfferPage .offers_2 tbody {
+		background: url(/Images/borders_2.gif);
+	}
+	#MX_ServiceMultiOfferPage .offers_3 tbody {
+		background: url(/Images/borders_3.gif);
+	}
+	#MX_ServiceMultiOfferPage .offers_4 tbody {
+		
+	}
+	#MX_ServiceMultiOfferPage .offers_5 tbody {
+		background: url(/Images/borders_5.gif);
+	}
+	#MX_ServiceMultiOfferPage .offers_4 thead td,#MX_ServiceMultiOfferPage .offers_4 tfoot td {
+		background:url(/Images/topBottom_4.gif);
+		height:1px;
+		margin:0px;
+		padding:0px;
+		line-height:0px;
+	}
+		/* table cell styls */
+		#MX_ServiceMultiOfferPage .offers_1 td {
+			width:756px; /* width of the page minus margins */
+		}
+		#MX_ServiceMultiOfferPage .offers_2 td {
+			width:378px; /* width of the page minus margins divided by 2 */
+		}
+		#MX_ServiceMultiOfferPage .offers_3 td {
+			width:252px; /* width of the page minus margins divided by 3 */
+		}
+		#MX_ServiceMultiOfferPage .offers_4 td {
+			width:189px; /* width of the page minus margins divided by 4 */
+		}
+		#MX_ServiceMultiOfferPage .offers_5 td {
+			width:151px; /* width of the page minus margins divided by 5, rounded down */
+		}
+		#MX_ServiceMultiOfferPage #multiOfferTable tbody td {
+			text-align:center;
+			padding:14px 14px 0px 14px;
+		}
+		#MX_ServiceMultiOfferPage .offerRow .Offer {
+			/* the offer by default is offset to line up with the button better
+			   here the offer is above the button, so we remove the offset. */
+			top:0px;
+			left:0px;
+		}
+		#MX_ServiceMultiOfferPage .buttonRow .buttonBox {
+			/* remove the default padding from the buttonBox because it is added by the table cell */
+			margin:0px;
+		}
+		#MX_ServiceMultiOfferPage #multiOfferTable .lastRow td {
+			/* add padding to teh bottom of the last row */
+			padding-bottom:14px;
+		}#MX_MigrationPage #modulesFrame {
+	 width:756px;
+	 float:left;
+	 margin:0px 5px 24px 0px;
+	 background:url(/images/borders_Migration.gif);
+}
+	#MX_MigrationPage .topBottom {
+		background: url(/images/topBottom_Migration.gif) no-repeat;
+		line-height:0px;
+		overflow:hidden;
+		margin:0px;
+		padding:0px;
+		height:1px;
+		clear:both;
+	}
+	#MX_MigrationPage .box {
+		border:0px none #FFF;
+		margin:14px 14px 0px 14px;
+		padding:0px;
+		overflow:hidden;
+	}
+	#MX_MigrationPage #mainBox {
+		border:1px solid #D8E6F8;  
+		padding:14px 14px 0px 14px;
+		margin:0px;       
+	}
+		#MX_MigrationPage #mainColumn {
+			width:500px;
+			float:left;
+			padding:0px;
+		}
+			#MX_MigrationPage #mainColumn .buttonWrapper {
+				width:450px;
+			}
+			#MX_MigrationPage #Right_Title {
+				margin:-4px 0px 14px 0px;
+				color:#F77C1F;
+				font-weight:normal;
+				font-size:127%;
+			}
+				#MX_MigrationPage #Right_Main_Text {
+					margin:-2px 0px 8px 0px;
+				}
+		#MX_MigrationPage #sideColumn {
+			width:230px;
+			margin:0px;
+			padding:0px 0px 0px 3px;
+		}
+		#MX_MigrationPage #sideColumn {
+			float:left;
+			margin:0px 0px 0px 6px;
+			padding:0px;
+		}
+			#MX_MigrationPage #sideColumn .buttonWrapper {
+				width:200px;
+			}
+			#MX_MigrationPage #Left_Title {
+				margin:-4px 0px 14px 0px;
+				font-weight:normal;
+				font-size:127%;
+				margin:-2px 0px 14px 0px;
+			}
+				#MX_MigrationPage #Left_Main_Text {
+					margin:-2px 0px 14px 0px;
+				}
+		#MX_MigrationPage .sideColumnRowSeparator {
+			background: url(/images/sideColumnMigrationSeporator.gif) repeat-x;
+			height:7px;
+			width:250px;
+			/*
+				in order to keep extra space from appearing in IE 6.0
+			 */
+			line-height:1px;
+			overflow:hidden;
+		}
+			#MX_MigrationPage #FAQ_Title {
+				margin:-4px 0px 14px 0px;
+				font-weight:normal;
+				font-size:127%;
+			}
+				#MX_MigrationPage .FAQ_Title {
+					margin:-2px 0px 8px 0px;
+					font-weight:bold;
+				}
+				#MX_MigrationPage .FAQ_Text {
+					margin:-2px 0px 14px 0px;
+				}
+/*
+#MX_ExternalLinkPage .buttonBox {
+	background-color: Black;
+}
+*/
+#MX_TridentPage #Main_Text {
+	margin:0px 0px 14px 0px;
+}
+	#MX_TridentPage #buttonContainer {
+		float:left;
+	}
+	#MX_TridentPage #linkContainer {
+		float:left;
+	}
+		#MX_TridentPage #linkContainer .planDetails {
+			display:block;
+			margin-bottom:1px;
+		}
+		#MX_TridentPage .extraLink a {
+			display:block;
+			float:left;
+			margin:10px 0px 0px 2px;
+			color:#0088E4;
+		}
+		/* FF needs a diffrent value form IE, this filters out IE */
+		#MX_TridentPage span[class="extraLink"] a {
+			margin-left:5px;
+		}#MX_GenericContentPage #genericContentFlash {
+	height: 100%;
+	width: 100%;
+}
+#MX_GenericContentPage #text {
+	padding: 14px;
+}#csat {
+	display:none;
+	margin:10px 25px 0px 0px;
+}
+	#csat #starRating {
+		float:right;
+		clear:right;
+		margin:0px 0px 0px 30px;
+	}
+		#csat #Control_Label {
+			float:left;
+			color:#999;
+			margin:2px 5px 0px 0px;
+			font-size:100%;
+			color:#646464;
+			
+		}
+		#csat #ratingControl {
+			list-style:none;
+			margin:0px;
+			padding:0px;
+			display:inline;
+			cursor:pointer;
+		}
+			#csat #ratingControl li {
+				margin:0px;
+				padding:0px;
+				width:14px;
+				float:left;
+			}
+				#csat .csatStar {
+					margin:0px;
+					padding:0px;
+				}
+	#csat #ratingTextContainer {
+		float:right;
+		clear:right;
+		margin:0px;
+		font-size:100%;
+		color:#000;
+		overflow:visible;		
+	}
+		#csat #ratingControlText {
+			display:block;
+			width:auto;
+			text-align:right;
+		}
+	#csat #Questions {
+		clear:both;
+		color:#000;
+		
+	}
+		#csat .multipuleChoice {
+			
+		}
+			#csat .Question {
+				font-weight:normal;
+				margin:3px 0px 0px 0px;
+				padding:0px;  
+				font-size:100%;
+				color:#000;
+			}
+			#csat .choices {
+				border:0px;
+				margin:0px 0px 0px 5px;
+				padding:0px;
+				display:inline;
+			}
+				#csat .choices input {
+					margin:0px;
+					padding:0px;
+					vertical-align:middle;
+				}
+				#csat .choices label {
+					display:block;
+					margin:0px;
+					padding:0px;
+				}
+	#csat #Submit_Button {
+		text-align:right;
+	}
+	#csat #thankYou {
+		font-size:100%;
+		color:#646464;
+	}
+	#csat #Questions, #csat #thankYou {
+		clear:both;
+		float:right;
+		display:none;
+		text-align:left;
+	}
+#MX_PostSalesMainPage {
+	
+}
+#MX_PostSalesMainPage #headTop {
+	border-bottom-color:#DDD;
+}
+#MX_PostSalesMainPage .content{
+}
+	#MX_PostSalesMainPage #pseudoTable {
+		margin:0px 0px 8px 0px;
+	}
+		#MX_PostSalesMainPage .columns_4 {
+			background: url(/Images/borders_4_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_3 {
+			background: url(/Images/borders_3_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_2 {
+			background: url(/Images/borders_2_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_4 .topBottom {
+			background: url(/Images/topBottom_4_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_3 .topBottom {
+			background: url(/Images/topBottom_3_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_2 .topBottom {
+			background: url(/Images/topBottom_2_gray.gif);
+		}
+		#MX_PostSalesMainPage .columns_1 {
+			border-color:#DDD;
+		}
+		#MX_PostSalesMainPage .title {
+			border:1px solid #DDD;
+			border-top:0px none #DDD;
+			color:#377BDC;
+			margin:0px 0px 8px 0px;
+			padding:0px;
+			background:#FFF;
+		}
+			#MX_PostSalesMainPage .title h3 {
+				border:2px solid #FFF;
+				border-bottom:0px none #FFF;
+				color:#377BDC;
+				padding:5px;
+				margin:0px;
+				background:url(/Images/Post_Sales_Gradient.gif) bottom repeat-x;
+			}
+			#MX_PostSalesMainPage .title a {
+				color:#377BDC;
+				text-decoration:none;
+			}
+		#MX_PostSalesMainPage .Image {
+			padding:0px 8px 8px 8px;
+		}
+		#MX_PostSalesMainPage .Main_Description {
+			text-align:left;
+			padding:0px 8px 8px 8px;
+		}
+		#MX_PostSalesMainPage .button {
+			padding:0px 8px 8px 8px;
+			text-align:right;
+		}
+		#MX_PostSalesMainPage #bottomButton {
+			margin: 24px 0px 0px 14px;
+		}
+	#MX_PostSalesMainPage #modulesFrame {
+		width:727px;
+		padding:14px 14px 0px 14px;
+	}
+	#MX_PostSalesMainPage #modulesFrame {
+		border:1px solid #DDD;
+	}
+		#MX_PostSalesMainPage #modulesFrame .Bottom_Sections {
+			padding:0px 12px 8px 12px;
+		}
+			#MX_PostSalesMainPage #modulesFrame .first {
+				padding:0px 24px 0px 0px;
+			}
+			#MX_PostSalesMainPage #modulesFrame .last {
+				padding:0px 0px 0px 24px;
+			}
+		#MX_PostSalesMainPage #modulesFrame .Section_Icon {
+			float:left;
+		}
+		#MX_PostSalesMainPage #modulesFrame .Name {
+			margin:0px 0px 4px 0px;
+			color:#377BDC;
+			width:140px;
+		}
+			#MX_PostSalesMainPage #modulesFrame .Name a {
+				color:#377BDC;
+			}
+		#MX_PostSalesMainPage #modulesFrame .Section_Text {
+			width:140px;
+			position:relative;
+		}
+			#MX_PostSalesMainPage #modulesFrame .moreDetail {
+				position:absolute;
+				right:-30px;
+				bottom:0px;
+			}
+				#MX_PostSalesMainPage #modulesFrame .moreDetail img {
+					border:0px none #FFF;
+				}
+	#MX_PostSalesMainPage #Footer{
+		margin:8px 0px 0px 0px;
+		border-top-color:#DDD;
+	}#MX_PostSalesDemoPage .content {
+	margin-bottom: 38px;
+}
+#MX_PostSalesDemoPage #pageTitles {
+	height: 18px;
+	margin: 0px;
+}
+#MX_PostSalesDemoPage #bottomButton {
+	margin: 24px 0px 0px 14px;
+}
+#MX_VOIPPlansPage #headTop {
+	border-bottom-color:#DDD;
+}
+#MX_VOIPPlansPage #Footer{
+	margin:8px 0px 0px 0px;
+	border-top-color:#DDD;
+}
+	#plans {
+		border-collapse:collapse;
+		color:#333;
+	}
+		#plans caption {
+			border:1px solid #DDD;
+			border-bottom:0px none #DDD;
+			font-size:0.889em;		/*	0.889 is 127% of 0.7, the caption tag dose not allow font size to be inherited well in all browsers	*/
+			font-weight:bold;
+			padding:8px 14px 8px 14px;
+			text-align:left;
+			color:#00156E;
+			background:url(/Images/VOIP_Gradient.gif) top repeat-x;
+		}
+		#plans tfoot td {
+			border:1px solid #DDD;
+			border-top:0px none #DDD;
+			padding:8px 14px 8px 14px;
+			text-align:left;
+
+		}
+		#plans hr {
+			height:1px;
+			background:#DDD;
+			color:#DDD;
+			border:0px none #FFF;
+		}
+		#plans ul,#MX_VOIPPlansPage #plans ol{
+			padding:0px;
+			margin:0px;
+		}
+			#plans li {
+				list-style:none;
+				background:url(/Images/small_red_box.gif) 0px 5px no-repeat;
+				margin:0px;
+				padding:0px 0px 0px 6px;
+			}
+		#plans .icon {
+			position:relative;
+			float:left;
+		}
+			#plans .icon img {
+				position:absolute;
+				top:-20px;
+				left:0px;
+			
+			}
+		#plans h4{
+			text-align:left;
+			margin:0px;
+			font-variant:small-caps;
+		}
+		#plans .cell {
+			border-left:1px solid #DDD;
+			border-right:1px solid #DDD;
+			vertical-align:top;
+		}
+			#plans th.cell {
+				font-size:0.889em;
+				padding:14px 8px 8px 8px;
+				font-variant: small-caps;
+				text-align:left;
+			}
+				#MX_VOIPPlansPage .plans_1 th.cell {
+					padding:14px 8px 14px 12px;
+					width:350px;
+				}
+				#MX_VOIPPlansPage .plans_2 th.cell {
+					padding:14px 8px 14px 12px;
+					width:180px;
+				}
+				#MX_VOIPPlansPage .plans_3 th.cell {
+					padding:14px 8px 14px 12px;
+					width:96px;
+				}
+				
+				
+				#MX_VOIPPlansPage .plans_1 .title {
+					display:block;
+					margin:14px 0px 14px 60px;
+				}
+				#MX_VOIPPlansPage .plans_2 .title {
+					display:block;
+					margin:0px 0px 0px 60px;
+				}
+				#MX_VOIPPlansPage .plans_3 .title {
+					display:block;
+					margin:0px 0px 0px 14px;
+				}
+
+				#MX_VOIPPlansPage .plans_1 td.cell {
+					padding:14px 0px 8px 60px;
+					width:423px;
+				}
+				#MX_VOIPPlansPage .plans_2 td.cell {
+					padding:14px 8px 8px 55px;
+					width:286px;
+				}
+				#MX_VOIPPlansPage .plans_3 td.cell {
+					padding:14px 8px 8px 12px;
+					width:204px;
+				}
+				#MX_VOIPPlansPage #plans td.divider {
+					padding:0px 8px 0px 8px;
+					height:1px;
+					width:auto;
+				}
+				#MX_VOIPPlansPage .plans_1 td.cost {
+					padding:0px 8px 0px 8px;
+				}
+				#MX_VOIPPlansPage #plans td.cost {
+					text-align:center;
+					font-weight:bold;
+					vertical-align:middle;
+				}
+				#MX_VOIPPlansPage .plans_1 td.cost {
+					padding:0px 8px 0px 8px;
+				}
+				.plans_2 td.cost {
+					padding-left:8px;
+				}
+				#plans td.preDivide {
+					padding-bottom:5px;
+				}
+				#plans td.postDivide {
+					padding-top:5px;
+				}
+		#plans .top{
+			border-top:1px solid #DDD;
+			font-size:0.889em;
+		}
+		#plans .bottom{
+			border-bottom:1px solid #DDD;
+		}
+		#MX_VOIPPlansPage #plans .bottom{
+			padding-left:8px;
+		}
+#plans .buttonBox{
+			text-align:center;
+		}
+		#plans .MXButton{
+			float:none;
+			display:inline-block;
+			text-align:left;
+			margin:0px auto 0px auto;
+		}
+		#plans a[class='MXButton']{
+			display:table;
+		}
+#MX_VOIPPlansPage .Footnote {
+	margin:8px 0px 0px 0px;
+	font-size:100%;
+	color:#FE6600;
+}#MX_RunOncePage {
+	width: 426px;
+	text-align: left;
+	margin-left: auto;	/*	center page in FF	*/
+	padding: 4px 14px 12px 14px;
+	margin-right: auto;
+}
+
+#MX_RunOncePage #Header {
+	margin:0px 0px 16px 0px;
+}
+	#MX_RunOncePage #Header img {
+		vertical-align:middle;
+	}
+
+#MX_RunOncePage #headTop {
+	border-bottom:0px none #FFF;
+}
+#MX_RunOncePage #pageTitles {
+	height:0px;
+	width:0px;
+}
+#MX_RunOncePage #content {
+	margin:0px;
+	background-color:#FFFFFF;
+}
+	#MX_RunOncePage #upper {
+		background-image: url(/Images/Run_Once_Gradient1.gif);
+		background-position: bottom;
+		background-repeat: repeat-x;
+		vertical-align:middle;
+		border:1px solid #DDD;
+		margin:0px;
+		padding:9px 8px 9px 8px;
+		font-size:127%;
+		color:#0074b7;
+	}
+	#MX_RunOncePage #middle {
+		border:1px solid #DDD;
+		border-width:0px 1px 0px 1px;
+		padding:8px;
+	}
+		#MX_RunOncePage #middle img {
+			float:left;
+		}
+		#MX_RunOncePage #middle h3 {
+			font-size:127%;
+			color:#666;
+		}
+		#MX_RunOncePage #middle img {
+			float:left;
+		}
+		
+	#MX_RunOncePage #lower {
+		background-image: url(/Images/Run_Once_Gradient2.gif);
+		background-position: bottom;
+		background-repeat: repeat-x;
+		text-align:right;
+		border:1px solid #DDD;
+		margin:0px;
+		padding-right:13px;
+	} 
+
+#MX_RunOncePage .HIGButton {
+	margin:14px 0px 13px 8px;
+}
+#MX_RunOncePage .Footnote {
+	padding: 12px 13px;
+	text-align:center;
+	font-size:127%;
+	color:#0074b7;
+}
+#MX_VOIPDevicesPage {
+
+}
+#MX_VOIPDevicesPage #headTop {
+	border-bottom-color:#DDD;
+}
+#MX_VOIPDevicesPage #Footer{
+	margin:8px 0px 0px 0px;
+	border-top-color:#DDD;
+}
+	
+#MX_VOIPDevicesPage #PlansFootnote{
+	float:right;
+	text-align:left;
+}
+#MX_VOIPDevicesPage #plans  {
+		width:756px;
+	}
+	#MX_VOIPDevicesPage caption  {
+		width:756px;
+	}
+	#MX_VOIPDevicesPage #plans th.bottom {
+		border-bottom:0px none #FFF;
+	}
+	#MX_VOIPDevicesPage #plans th.top {
+		border-top:0px none #FFF;
+	}
+	#MX_VOIPDevicesPage #plans th.cell {
+		padding-top:0px;
+		text-align:center;
+	}
+	#MX_VOIPDevicesPage #plans th.top {
+		padding-top:14px;
+	}
+		#MX_VOIPDevicesPage .plans_1 .title {
+		}
+		#MX_VOIPDevicesPage .plans_2 .title {
+		}
+		#MX_VOIPDevicesPage .plans_3 .title {
+		}
+		
+		#MX_VOIPDevicesPage .plans_1 td.cell {
+			padding:0px 12px 12px 12px;
+		}
+		#MX_VOIPDevicesPage .plans_2 td.cell {
+			width:260px;
+			padding:0px 12px 12px 12px;
+		}
+		#MX_VOIPDevicesPage .plans_3 td.cell {
+			width:206px;
+			padding:0px 12px 12px 12px;
+		}
+		#MX_VOIPDevicesPage .plans_1 th.cell {
+			width:180px;
+			margin-left:96px;
+		}
+		#MX_VOIPDevicesPage .plans_2 th.cell {
+			width:130px;
+			
+		}
+		#MX_VOIPDevicesPage .plans_3 th.cell {
+			margin-left:96px;
+		}
+		#MX_VOIPDevicesPage .plans_1 td.top {
+			padding-top:14px;
+		}
+		#MX_VOIPDevicesPage .plans_2 td.top {
+			padding-top:14px;
+		}
+		#MX_VOIPDevicesPage .plans_3 td.top {
+			padding-top:14px;
+		}
+		#MX_VOIPDevicesPage .plans_1 td.lastSide {
+			width:120px;
+		}
+		#MX_VOIPDevicesPage .plans_2 td.lastSide {
+			width:96px;
+		}
+		#MX_VOIPDevicesPage .plans_3 td.lastSide {
+			width:30px;
+		}
+	#MX_VOIPDevicesPage #plans .side {
+		border-right:1px solid #DDD;
+	}
+	#MX_VOIPDevicesPage #plans .lastSide {
+		border-right:1px solid #DDD;
+	}
+#MX_VOIPDevicesPage #Devices_Intro_Text {
+	background:url(/Images/VOIP_Gradient.gif) top repeat-x;
+	margin:0px;
+	border:1px solid #DDD;
+	border-bottom:0px solid #FFF;
+	border-top:0px solid #FFF;
+	color:#00156E;
+	font-weight:bold;
+	font-size:127%;
+	padding:8px 14px 14px 14px;
+}
+#MX_VOIPDevicesPage #Device_Section {
+	border:1px solid #DDD;
+	border-top:0px none #DDD;
+	
+}
+	#MX_VOIPDevicesPage .device1 {
+		padding:0px 0px 0px 210px;
+		width:545px;
+	}
+	#MX_VOIPDevicesPage .device2 {
+		padding:0px 0px 0px 145px;
+		width:610px;
+	}
+	#MX_VOIPDevicesPage .device3 {
+		padding-left:96px;
+		width:659px;
+	}
+#MX_VOIPDevicesPage .deviceSection,#MX_VOIPDevicesPage .deviceSectionTop {
+	float:left;
+
+}
+	#MX_VOIPDevicesPage .device1 .deviceSection,#MX_VOIPDevicesPage .device1 .deviceSectionTop {
+		width:382px;
+	}
+	#MX_VOIPDevicesPage .device2 .deviceSection,#MX_VOIPDevicesPage .device2 .deviceSectionTop{
+		width:218px;
+		margin-right:55px;
+	}
+	#MX_VOIPDevicesPage .device3 .deviceSection,#MX_VOIPDevicesPage .device3 .deviceSectionTop {
+		width:184px;
+		margin-right:24px;
+
+	}
+
+#MX_VOIPDevicesPage .postDeviceClear {
+	overflow: hidden;
+	clear: both;
+	/*  in order to hide float element  */
+	height: 1px;
+	margin: -1px 0px 32px 0px;
+	font-size: 1px;
+	
+}
+
+#MX_VOIPDevicesPage .devicesIcon {
+	float:left;
+	position:relative;	/*	fix IE float bug	*/
+	z-index:10;
+}
+
+#MX_VOIPDevicesPage .devicesInfo {
+	position:relative;	/*	fix IE float bug	*/
+	z-index:30;
+}
+
+#MX_VOIPDevicesPage .devicesInfo a {
+	color:#0088E4;
+}
+	#MX_VOIPDevicesPage .devicesInfo h3 {
+		font-size:127%;
+		font-weight:bold;
+		font-variant:small-caps;
+		margin:0px;
+	}
+
+.Device {
+	border:1px solid #DDD;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+#MX_VOIPDevicesPage .Device h4 {
+	margin:0px 0px 8px 24px;
+	padding:0px;
+	color:#549FE3;
+}
+
+#MX_VOIPDevicesPage .Device_only {
+	margin-bottom:4px;
+}
+#MX_VOIPDevicesPage .Device_first {
+	border-bottom:0px none #DDD;
+}
+#MX_VOIPDevicesPage .Device_middle {
+	border-top:0px none #DDD;
+	border-bottom:0px none #DDD;
+}
+#MX_VOIPDevicesPage .Device_last {
+	border-top:0px none #DDD;
+	margin-bottom:4px;
+}
+#MX_VOIPDevicesPage .device2 .Features {
+	margin:8px 8px 0px 60px;
+}
+	#MX_VOIPDevicesPage .Features ol, .Features ul {
+		margin:0px;
+		padding:0px;
+	}
+			#MX_VOIPDevicesPage .Features li {
+				margin:0px 0px 0px 12px;
+				padding:0px;
+			}
+#MX_VOIPDevicesPage .device3 .Features {
+	margin:8px 8px 0px 44px;
+}
+
+#MX_VOIPDevicesPage .device3 .Price {
+	float:left;
+	margin:14px 14px 14px 14px;
+	width:45px;
+}
+#MX_VOIPDevicesPage .device3 .Link {
+	float:right;
+	margin:14px 14px 14px 0px;
+	width:45px;
+}
+#MX_VOIPDevicesPage .device1 h4 {
+	width:140px;
+	float:left;
+	margin-left:50px;
+	position:relative;
+	top:7px;
+}
+#MX_VOIPDevicesPage .device1 .deviceDetails {
+	width:185px;
+	float:right;
+}
+#MX_VOIPDevicesPage .device1 .Features {
+	margin:8px 8px 0px 0px;
+}
+
+#MX_VOIPDevicesPage .device1 .Price {
+	text-align:left;
+	margin:0px 0px 14px 0px;
+}
+.device1 .Link {
+	text-align:right;
+	margin:14px 14px 0px 0px;
+}
+
+#MX_VOIPDevicesPage .device2 .Price {
+	float:left;
+	margin:14px 0px 14px 76px;
+	width:60px;
+}
+#MX_VOIPDevicesPage .device2 .Link {
+	float:right;
+	margin:14px 14px 14px 0px;
+	width:60px;
+
+}
+	#MX_VOIPDevicesPage .Link a {
+		color:#0088E4;
+
+	}
+#MX_VOIPDevicesPage .Popup_Link {
+	position:relative;
+	z-index:20;
+}
+	#MX_VOIPDevicesPage .popupTitleBar {
+		background:#DDD;
+		height:14px;
+	}
+		#MX_VOIPDevicesPage .popupTitleBar a {
+			background:url(/Images/glyph_close_rest.gif) no-repeat;
+			margin:2px;
+			display:block;
+			height:10px;
+			width:10px;
+			float:right;
+		}
+			#MX_VOIPDevicesPage .popupTitleBar a:hover {
+				background:url(/Images/glyph_close_hover.gif) no-repeat;
+			}
+	#MX_VOIPDevicesPage .popupText {
+		padding:8px;
+	}
+	#MX_VOIPDevicesPage .Text_window {
+		display:none;
+		position:absolute;
+		background:#FFF;
+		border:1px solid #DDD;
+		top:-30px;
+		left:-30px;
+		width:200px;
+		
+	}
+	#MX_VOIPDevicesPage .Popup_Link .close {
+		margin-top:8px;
+		text-align:right;
+		display:block;
+	}
+#MX_VOIPDevicesPage #Footnote2 {
+	padding:8px 0px 4px 0px;
+	color:#FE6600;
+}#MX_DiscoverPage {
+	background:url(/Images/BackgroundTopCenter.gif) top right no-repeat;
+	text-align:center;
+	margin-left: auto;	/*	center page in FF	*/
+	margin-right: auto;
+	width:1140px;
+}
+#MX_DiscoverPage #head {
+	text-align: left;
+	margin-left: auto;	/*	center page in FF	*/
+	margin-right: auto;
+	width:1022px;
+	height:72px;
+	margin:0px;
+	padding:8px 0px 0px 0px;
+	background-image:none;
+	
+}
+	#MX_DiscoverPage #head img{
+		vertical-align:middle;
+	}
+	#MX_DiscoverPage #Header {
+		margin:0px;
+		color:#FFF;
+	}
+#MX_DiscoverPage #content {
+	text-align: left;
+	margin-left: auto;	/*	center page in FF	*/
+	margin-right: auto;
+	width:1022px;
+	position:relative;
+	width:1022px;
+	padding:0px;
+}
+#MX_DiscoverPage object {
+	position:relative;
+	z-index:1000;
+	top:0px;
+	left:9px;
+}
+#MX_DiscoverPage object[type='application/x-shockwave-flash'] {
+	top:2px;
+	left:0px;
+}
+/* fix extra gap below header in firefox */
+#MX_DiscoverPage div[id='content'] {
+	border:1px solid transparent;
+}
+#MX_DiscoverPage #Footer {
+	text-align: left;
+	margin-left: auto;	/*	center page in FF	*/
+	margin-right: auto;
+	width:1022px;
+}
+#MX_DiscoverPage #linksBoxBackground {
+	width:247px;
+	position:relative;
+	float:left;
+	z-index:0;
+	top:0px;
+	left:0px;
+	padding:0px;
+	margin:21px 0px 0px 1px;
+	background:url(/Images/NavRepeat.gif) 1px 0px repeat-y; /* images moved over one pixel to fix IE bug */
+}
+	#MX_DiscoverPage #linksBox {
+		margin:0px;
+		padding:0px;
+		background:url(/Images/NavMain.gif) 1px 0px no-repeat; /* images moved over one pixel to fix IE bug */
+		width:247px;
+	}
+		#MX_DiscoverPage #linkBoxHieght {
+			float:left;
+			margin:0px;
+			padding:0px;
+		}
+		#MX_DiscoverPage #linksList {
+			padding:15px 11px 0px 7px;
+			margin:0px;
+		}
+		#MX_DiscoverPage .linkCatagory {
+			padding:0px;
+			list-style:none;
+					
+		}
+			#MX_DiscoverPage .linkCatagory h4 {
+				padding:6px 6px 2px 10px;
+				font-weight:bold;
+				font-size:109%;
+				margin:0px;
+				color:#FFF;
+			}
+			#MX_DiscoverPage .catagoryLinkList {
+				margin:0px 0px 6px 0px;
+				padding:0px;
+				
+			}
+				#MX_DiscoverPage .link {
+					margin:0px 0px 0px 0px;
+					list-style:none;
+					font-weight:bold;
+					font-size:91%;
+
+				}
+					#MX_DiscoverPage .linkIcon {
+						vertical-align:middle;
+						position:absolute;
+						left:10px;
+						top:3px;
+					}
+					#MX_DiscoverPage .link a .linkSpace {
+						vertical-align:middle;
+					}
+					#MX_DiscoverPage img {
+						border-width:0px;
+					}
+					#MX_DiscoverPage .linkInnerBox {
+
+					}
+					#MX_DiscoverPage .link a {
+						color:#FFF;
+						padding:0px 6px 0px 10px;
+						display:block;
+						position:relative;
+						width:187px; 
+					}
+					#MX_DiscoverPage .link a:hover {
+						text-decoration:none;
+					}
+					#MX_DiscoverPage .link a:active {
+						text-decoration:none;
+					}
+				#MX_DiscoverPage .activeLink {
+					margin:0px;
+					list-style:none;
+					font-weight:bold;
+					font-size:91%;
+					width:229px;
+				}
+					#MX_DiscoverPage .activeLink a .linkSpace {
+						vertical-align:middle;
+					}
+					#MX_DiscoverPage .activeLink a {
+						color:#FFF;
+						padding:0px 6px 0px 10px;
+						display:block;
+						position:relative;
+						background:url(/Images/NavRolloverTop.gif) top left no-repeat;
+						width:187px; 
+						
+					}
+					#MX_DiscoverPage li[class='activeLink'] {
+						background:url(/Images/SuperCoolOverlay.png) repeat;
+					}
+					#MX_DiscoverPage .activeLink a:hover {
+						text-decoration:none;
+					}
+					#MX_DiscoverPage .activeLink a:active {
+						text-decoration:none;
+					}
+		#MX_DiscoverPage #linkBottom {
+			/* for some strange reason in IE if you set the margin to 0px it comes out being three pixels, but by setting to 1px 
+			  * it is only one, so we move everything over 1 pixel
+			  */
+			margin:0px 0px 0px 1px;
+			padding:0px;
+			border:0px none #FFF;
+		}
+
+
+#MX_DiscoverPage #rightColumn {
+	margin-left:-6px;
+	margin-bottom:15px;
+	position:relative;
+	z-index:100;
+	float:left;
+}	
+	#MX_DiscoverPage #discoverBox {
+		width:777px;
+		position:relative;
+	}
+		#MX_DiscoverPage #titleBackground {
+			background:url(/Images/TopBannerRepeat.gif) 0px 1px repeat-y;
+			margin:0px;
+		}
+			#MX_DiscoverPage #title {
+				background:url(/Images/TopBannerMain.gif) top left no-repeat;
+				position:relative;
+			}
+				#MX_DiscoverPage #title h1 {
+					font-size:318%;
+					margin:0px 18px 3px 18px; /* setting the top margin breaks in FF, but the line-height maintains the correct amout of space at the top */
+					padding:0px;
+					position:relative;
+					width:720px;
+					font-family:"Segoe Light", Verdana, Sans-Serif;
+				}
+					#MX_DiscoverPage #titleText {
+						margin:0px;
+						padding:0px;
+						z-index:10;
+						position:relative;
+						color:#FFF;
+					}
+					#MX_DiscoverPage #titleShadow {
+						position:absolute;
+						top:2px;
+						left:1px;
+						z-index:1;
+						color:#333;
+
+					}
+				#titleSubText {
+					font-size:109%;
+					width:589px;
+					padding:0px 18px 12px 18px; 
+					color:#FFF;
+				}
+
+	#MX_DiscoverPage #discoverBackground {
+		margin:0px;
+		padding:0px;
+		width:777px;
+		background:url(/Images/CenterBackgroundRepeat.jpg) top left repeat-y;
+	}
+		#MX_DiscoverPage #CenterTop {
+			margin:0px;
+			padding:0px;
+		}
+		#MX_DiscoverPage #discover {
+			background:url(/Images/CenterBackgroundBottom.jpg) bottom left no-repeat;
+		}
+			#MX_DiscoverPage .section {
+				display:none;
+			}
+			#MX_DiscoverPage #home {
+				display:block;
+			}
+			#MX_DiscoverPage .discoverHeight {
+				float:left;
+			}
+			#MX_DiscoverPage .Right_Image {
+				position:absolute;
+				top:12px;
+				left:280px;
+				overflow:hidden;
+			}
+			#MX_DiscoverPage .innerPageBackground {
+				width:579px;
+				background:url(/Images/ForegroundBoxRepeat.gif) top left repeat-y;
+				margin:0px 0px 0px 10px;
+				
+			}
+				#MX_DiscoverPage .innerPage {
+					background:url(/Images/ForegroundBoxMain.gif) top left no-repeat;
+					padding:0px 13px 0px 8px;
+					position:relative;
+					width:558px;
+					overflow:hidden;
+				}
+					#MX_DiscoverPage .Learn_More {
+						position:absolute;
+						width:100px;
+						top:10px;
+						right:10px;
+						text-align:right;
+					}
+						#MX_DiscoverPage .Learn_More a{
+							color:#FFF;
+							text-decoration:underline;
+						}
+					#MX_DiscoverPage .rightImage {
+						background-repeat:no-repeat;
+						background-position:288px 10px;
+						width:558px;
+						
+					}
+					#MX_DiscoverPage div[class='rightImage'] {
+						border-top:1px solid transparent; /* odd firefox issuse, to much space between top and discover box, but this fixes it */
+					}
+						#MX_DiscoverPage .leftColumn {
+							width:280px;
+							float:left;
+							
+						}
+							#MX_DiscoverPage .buttonContainer {
+								width:280px;
+								position:relative;
+								clear:left;
+							}
+							
+								#MX_DiscoverPage .leftColumn .Bottom_Image {
+									position:relative;
+									top:0px;
+									left:0px;
+									z-index:1;
+									width:280px;
+								}
+								#MX_DiscoverPage .buttonContainer a {
+									margin-top:-30px;
+									position:relative;
+									z-index:10;
+									margin-bottom:12px;
+									width:121px;
+								}
+						#MX_DiscoverPage .innerTitle {
+							color:#FFF;
+							font-size:164%;
+							margin-top:12px;
+							font-family:"Segoe Light", Verdana, Sans-Serif;
+							line-height:0.9em;
+						}
+						#MX_DiscoverPage .innerText {
+							color:#FFF;
+							margin:0px 10px 0px 0px;
+							padding-bottom:20px;
+						}
+						
+					/* container that holds one of the flash demos */
+					#MX_DiscoverPage .demo {
+						display:none;
+						position:absolute;
+						margin:0px;
+						padding:0px;
+						top:0px;
+						left:0px;
+					}
+					#MX_DiscoverPage .demo object {
+						position:absolute;
+						top:0px;
+						left:0px;
+					}
+		#MX_DiscoverPage .ForegroundBottom {
+			margin:0px 0px 13px 10px;
+		}
+	#MX_DiscoverPage #promotionalAreaBackground {
+		background:url(/Images/PromontionMiddle.gif) top left repeat;
+		margin:19px 0px 0px 10px;
+		padding:0px;
+		width:766px; /* IE fix, bakcground images will not show without width */
+	}
+		#MX_DiscoverPage #promotionalAreaMidground {
+			background:url(/Images/PromontionTop.gif) top left repeat-x;
+			margin:0px;
+			padding:0px;
+			width:100%; /* IE fix, bakcground images will not show without width */
+		}
+			#MX_DiscoverPage #promotionalArea {
+				background:url(/Images/PromontionBottom.gif) bottom left repeat-x;
+				margin:0px;
+				padding:0px;
+				color:#333;
+				width:100%; /* IE fix, bakcground images will not show without width */
+			}
+				#MX_DiscoverPage #promotionalArea .promontion {
+					float:left;
+					width:242px;
+					margin:16px 0px 0px 20px;
+					padding:0px;
+				
+					
+				}
+				#MX_DiscoverPage #promotionalArea .first {
+					margin-left:0px;
+				}
+					#MX_DiscoverPage #promotionalArea .promontion h3 {
+
+						padding:0px 11px 8px 11px; 
+						margin:0px;
+						
+						font-weight:bold;
+						font-size:100%;
+					}
+					#MX_DiscoverPage #promotionalArea .promontion div {
+
+						padding:0px 11px 16px 11px; 
+						margin:0px;
+					
+					}
+.DiscoverButton {
+	background:url(/Images/GreenButtonRepeat.gif) top left repeat-y;
+	display:block;
+	float:left;
+	width:121px;
+	color:#FFF;
+	text-align:center;
+	font-size:120%;
+	cursor:pointer;
+}
+	.DiscoverButton strong {
+		background:url(/Images/GreenButtonTop.gif) top left no-repeat;
+		display:block;
+		padding-top:7px;
+		width:121px;
+	}
+		.DiscoverButton span {
+			background:url(/Images/GreenButtonBottom.gif) bottom left no-repeat;
+			display:block;
+			padding:0px 5px 9px 5px;
+			width:111px;
+		}
+.DiscoverButton:hover {
+	text-decoration:none;
+}
+.DiscoverButton:active {
+	text-decoration:none;
+}
+.TryItButton {
+	background:url(/Images/OrangeButtonRepeat.gif) top left repeat-y;
+	margin-right:16px; /* IE spacing */
+	float:right; /* floating left causes bug with spacing in IE */
+}
+/* spacing for firefox */
+#MX_DiscoverPage a[class~="TryItButton"] {
+	margin-right:28px;
+}
+	.TryItButton strong {
+		background:url(/Images/OrangeButtonTop.gif) top left no-repeat;
+	}
+		.TryItButton span {
+			background:url(/Images/OrangeButtonBottom.gif) bottom left no-repeat;
+		}
+
+
+/*
+ *		Vista Pre-Sales Templates
+ */
+#VistaBodyBackground
+{
+	background: url(/Images/BackgroundRepeat.jpg) top left repeat-x;
+	margin:0px;
+	padding:0px;
+	position:relative;
+}
+#VistaPresalesPage
+{
+	font-family:'Segoe UI' Verdana Arial Sans-Serif;
+	width:800px;
+	margin:0px;
+	padding:0px;
+	position:relative;
+	color:#666;
+}
+	#VistaPresalesPage #VistaBackground
+	{
+		background: url(/Images/OuterRectangleRepeat.gif) 70px 0px repeat-y;
+		margin:0px;
+		padding:0px;
+		position:relative;
+	}
+	#VistaPresalesPage #VistaInnerBackground
+	{
+		background: url(/Images/Background.jpg) top left no-repeat;
+		width:800px;
+		margin:0px;
+		padding:80px 0px 0px 0px;
+		position:relative;
+	}
+	#VistaPresalesPage #Header
+	{
+		position:absolute;
+		top:20px;
+		left:40px;
+		font-size:236%;
+		color:#FFF;
+	}
+	#VistaPresalesPage #Tab_Control
+	{
+		position:absolute;
+		top:80px;
+		left:90px;
+		color:#FFF;
+	}
+	#VistaPresalesPage #Tab_Control a,#VistaPresalesPage  #Tab_Control span 
+	{
+		color:#FFF;
+	}
+	#VistaPresalesPage #Tab_Control a
+	{
+		text-decoration:underline;
+	}
+	#VistaPresalesPage #content
+	{
+		margin:0px 56px 0px 70px;
+		padding:20px 25px 0px 20px;
+		width:636px;
+	}
+	#VistaPresalesPage #titles
+	{
+		margin:0px 0px 13px 0px;
+		padding:13px 0px 0px 6px;
+		height:57px;
+	}
+	#VistaPresalesPage #content div[id='titles']
+	{
+		height:auto;
+		min-height:57px;
+	}
+		#VistaPresalesPage #Page_Title
+		{
+			font-size:173%;
+			color:#3399CC;
+			margin-bottom:2px;
+		}
+		#VistaPresalesPage #Page_Subtitle
+		{
+			font-size:127%;
+			color:#666;
+		}
+	#VistaPresalesPage #innerBox
+	{
+		background: url(/Images/InnerRectangleRepeat.gif) repeat-y;
+	}
+		#VistaPresalesPage #innerBoxTop
+		{
+			position:relative;
+			background: url(/Images/InnerRectangleTop.jpg) no-repeat;
+			width:580px;
+			height:256px;
+		}
+		#VistaPresalesPage #content div[id='innerBoxTop']
+		{
+			height:auto;
+			min-height:256px;
+		}
+		#VistaPresalesPage #innerBoxBottom
+		{
+			background: url(/Images/InnerRectangleBottom.gif) bottom left no-repeat;
+			width:575px;
+			height:42px;
+		}
+		#VistaPresalesPage #content div[id='innerBoxBottom']
+		{
+			height:auto;
+			min-height:42px;
+		}
+			#VistaPresalesPage .Content_Block
+			{
+				margin-bottom:14px;
+			}
+			#VistaPresalesPage #innerBox .Image
+			{
+				text-align:center;
+				float:left;
+			}
+			#VistaPresalesPage .Block_Title
+			{
+				font-size:135%;
+				margin:0px;
+				color:#666;
+			}
+			#VistaPresalesPage .Block_Text
+			{
+				font-size:118%;
+			}
+			#VistaPresalesPage .Learn_More
+			{
+				color:#3399cc;
+			}
+		#VistaPresalesPage #innerBox ul,#innerBox ol
+		{
+			margin:0px 0px 0px 16px;
+			padding:0px;
+		}
+		#VistaPresalesPage .multipleImages #innerBoxTop
+		{
+			padding:51px 33px 0px 15px;
+			width:579px;
+		}
+		#VistaPresalesPage .singleImage #innerBoxTop
+		{
+			padding:47px 33px 0px 19px;
+		}
+		#VistaPresalesPage .multipleImages #innerBoxBottom
+		{
+			padding:10px 33px 0px 15px;
+			width:579px;
+		}
+		#VistaPresalesPage .singleImage #innerBoxBottom
+		{
+			padding:10px 33px 0px 19px;
+		}
+		#VistaPresalesPage .singleImage img
+		{
+			position:absolute;
+			top:-3px;
+			left:19px;
+		}
+	#VistaPresalesPage #innerBoxBottom
+	{
+		height:60px;
+	}
+	#VistaPresalesPage #content div[id='innerBoxBottom']
+	{
+		height:auto;
+		min-height:60px;
+	}
+	#VistaPresalesPage #contentsBottom
+	{
+		margin:0px 56px 0px 70px;
+		padding:3px 25px 20px 24px;
+		background: url(/Images/OuterRectangleBottom.gif) bottom left no-repeat;
+		height:39px;
+	}
+	#VistaPresalesPage #VistaBackground div[id='contentsBottom']
+	{
+		height:auto;
+		min-height:39px;
+	}
+		#VistaPresalesPage .region
+		{
+			display:block;
+			float:left;
+			width:245px;
+			color:#666;
+			cursor:pointer;
+			margin-left:10px;
+		}
+		#VistaPresalesPage .region:hover, #VistaPresalesPage .region:active
+		{
+			text-decoration:none;
+		}
+			#VistaPresalesPage .region span
+			{
+				display:block;
+			}
+			#VistaPresalesPage .region img
+			{
+				border:none;
+			}
+			#VistaPresalesPage .Region_Image
+			{
+				float:left;
+			}
+			#VistaPresalesPage .regionTextarea
+			{
+				float:left;
+			}
+				#VistaPresalesPage .Region_Text1
+				{
+					font-size:155%;
+					margin:0px 0px -5px 0px;
+					color:#000;
+				}
+				#VistaPresalesPage .Region_Text2
+				{
+					font-size:100%;
+					margin:0px;
+				}
+.VistaButton {
+	background-image:url(/Images/ButtonRight.gif);
+	margin-bottom:40px;
+}
+	.VistaButton .ButtonOuter {
+		background-image:url(/Images/ButtonLeft.gif);
+		padding:9px 0px 0px 0px;
+	}
+		.VistaButton .ButtonMiddle {
+			background-image:url(/Images/ButtonLeft.gif);
+			padding:0px 0px 0px 6px;
+		}
+			.VistaButton .ButtonInner {
+				background-image:url(/Images/ButtonRight.gif);
+				padding:0px 10px 4px 0px;
+			}
+			.VistaButton .ButtonText {
+				padding:0px 15px 12px 15px;
+				font-weight:normal;
+			}
