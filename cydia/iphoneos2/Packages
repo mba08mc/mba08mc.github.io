@@ -1,12 +1,12 @@
 Package: com.claudeclassic.mailtls
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Maintainer: Bilal Ahmed
-Filename: ./debs/com.claudeclassic.mailtls_1.0_iphoneos-arm.deb
-Size: 308608
-MD5sum: 27dfc66e5774a33d1e49fd78a5027bc3
-SHA1: 8d5857fb9c6f604fba85d0a14a02d4345df350b6
-SHA256: 2915066ce8507bb56dc7c0d07437612ec94dd41e84b6b85888280b46695e2baa
+Filename: ./debs/com.claudeclassic.mailtls_1.1_iphoneos-arm.deb
+Size: 308554
+MD5sum: 4dce143fa19b634d0b05f311bfc36215
+SHA1: 211eb0e8d699922e17af2d6afe1258a135931544
+SHA256: 3a58e76553a5e0f2884fe0611ff283de2027e84b3fae935fe2f711a3fa5116b1
 Name: MailTLS
 Section: Networking
 Author: ClaudeClassic
