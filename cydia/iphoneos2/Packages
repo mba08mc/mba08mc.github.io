@@ -1,3 +1,37 @@
+Package: com.bilalahmed.appstore08
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Bilal Ahmed
+Filename: ./debs/com.bilalahmed.appstore08_1.0_iphoneos-arm.deb
+Size: 120816
+MD5sum: 3d5717ca76a8259eed06cfb57bdfaab5
+SHA1: 6059e6d85532733a0dc94c5326a026711adbeaea
+SHA256: b0b07cec474af53fa273750c56eace8671649e0d0258c1070835a0e974b3e293
+Name: App Store (AppStore08)
+Author: Bilal Ahmed
+Section: Utilities
+Description: A working recreation of the July 2008 App Store for jailbroken iPhone OS 2.
+ Installs the App Store app plus its root install helper (so it can install apps),
+ which is launched on demand by launchd. Point it at your catalog server in
+ Updates > Server. Needs a patched MobileInstallation (iSign/AppSync).
+
+Package: com.claudeclassic.mailtls
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: Bilal Ahmed
+Filename: ./debs/com.claudeclassic.mailtls_1.0_iphoneos-arm.deb
+Size: 308608
+MD5sum: 27dfc66e5774a33d1e49fd78a5027bc3
+SHA1: 8d5857fb9c6f604fba85d0a14a02d4345df350b6
+SHA256: 2915066ce8507bb56dc7c0d07437612ec94dd41e84b6b85888280b46695e2baa
+Name: MailTLS
+Section: Networking
+Author: ClaudeClassic
+Description: Lets Mail on iPhone OS 2 reach Gmail, iCloud, Yahoo and AOL again.
+ Mail connects to 127.0.0.1 in plain text and MailTLS forwards the connection
+ to the real server over TLS 1.2. Started on demand by launchd, so it uses no
+ battery while Mail is idle. See /usr/share/mailtls/README.txt for setup.
+
 Package: com.claudeclassic.mailtls
 Version: 1.1
 Architecture: iphoneos-arm

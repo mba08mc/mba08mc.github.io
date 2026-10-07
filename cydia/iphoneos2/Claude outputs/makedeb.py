@@ -3,7 +3,7 @@
 # Everything is owned by root:wheel inside the package, which launchd insists on.
 import gzip, io, os, sys, tarfile, time
 
-VERSION = "1.1"
+VERSION = "1.2"
 PKG = "com.claudeclassic.mailtls"
 
 # (name, local port, server, server port, extra mailtls flags)
@@ -50,6 +50,10 @@ with the server's certificate checked against /usr/share/mailtls/cacert.pem.
 
 Problems are logged to syslog (tag "mailtls"). If they mention certificate
 dates, set the phone's date and time correctly.
+
+To see exactly what happens on a connection (passwords are blanked out):
+  touch /tmp/mailtls-debug      then try in Mail, then:  cat /tmp/mailtls.log
+  rm /tmp/mailtls-debug /tmp/mailtls.log     when you're done
 
 Another provider: copy one of /Library/LaunchDaemons/%s.*.plist, change the
 Label, the port after -l and the server, then: launchctl load <file>
