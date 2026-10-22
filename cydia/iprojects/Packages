@@ -43,3 +43,23 @@ Size: 5104
 MD5sum: 3497e70e25facd1c52358f5a104fd828
 SHA1: b0deb7c8077660b5f377de5977d3a17c2c849889
 SHA256: 1816a6f01c3938e5f54ac67942702f74e604c650f1d6c89d9d69d4ee671331e2
+
+Package: net.angelxwind.appsync40plus
+Version: 1.2.2
+Conflicts: us.hackulo.appsync40, us.hackulo.appsync41, us.hackulo.appsync42
+Replaces: us.hackulo.appsync40, us.hackulo.appsync41, us.hackulo.appsync42
+Section: Tweaks
+Maintainer: Karen/あけみ (angelXwind) <angelXwind@angelxwind.net>
+Pre-Depends: firmware (>= 4.0), firmware (<< 5.0)
+Provides: appsync, us.hackulo.appsync40, us.hackulo.appsync41, us.hackulo.appsync42
+Architecture: iphoneos-arm
+Homepage: https://cydia.angelxwind.net/
+Depiction: https://cydia.angelxwind.net/?page/net.angelxwind.appsync40plus
+Name: AppSync for iOS 4.0
+Author: Karen/あけみ, Dissident <angelXwind@angelxwind.net>
+Description: AppSync Unified allows you to sync and install unsigned iOS applications. Only for iOS 4.
+Filename: debs/net.angelxwind.appsync40plus_1.2.2_iphoneos-arm.deb
+Size: 9214
+MD5sum: 347075b0e7baed64c5341ef1d2ef6c0a
+SHA1: 6490ed69fe2a88e315a6a2cdc83844e3a1006ae7
+SHA256: cb9611adf1d69c8a38f8fd40402c5c8a5cfe37f9bb90179a4e17077bb1f702ce
