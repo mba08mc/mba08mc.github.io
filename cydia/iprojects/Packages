@@ -31,18 +31,18 @@ SHA256: 36432f4d56e50d1e99e0ef4d2c8d038dc7b2bedbe083e521c2b52413b1ca4255
 
 Package: com.iprojects.ifileiconfix
 Name: iFile Icon Fix
-Version: 1.1
+Version: 1.2
 Architecture: iphoneos-arm
 Section: Tweaks
 Depends: eu.heinelt.ifile, uikittools
 Maintainer: Bilal Ahmed
 Author: iProjects
 Description: Fixes the square icon issue on iFile on older versions of iOS
-Filename: debs/com.iprojects.ifileiconfix_1.1_iphoneos-arm.deb
-Size: 5086
-MD5sum: a9503cb94a4f91d53d5b6ce358f9f64b
-SHA1: 8a8d317e10d40152c26ec35b3c4ca229f0c56465
-SHA256: 02a7e410c460f853d32901adf06d23f8ef8d104b96818d8e06f4f9a2ae85f5cd
+Filename: debs/com.iprojects.ifileiconfix_1.2_iphoneos-arm.deb
+Size: 5678
+MD5sum: 0a3372330a1274a44843b87eb999b35d
+SHA1: b4eafcbf6d2acf8b65187b6335ecb449bc1e5c19
+SHA256: 2ffeff05d2dafdac321ad535b33019f9c6fc237951b33ba54119cd79ec507149
 
 Package: net.angelxwind.appsync40plus
 Version: 1.2.2
