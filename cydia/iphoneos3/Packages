@@ -143,6 +143,32 @@ Description: pseudo-codesign Mach-O files
 Depiction: http://cydia.saurik.com/info/ldid/
 Name: Link Identity Editor
 
+Package: mobileterminal
+Version: 364.1-10
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 536
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: bash, coreutils, ncurses, system-cmds
+Filename: debs/mobileterminal_364.1-10_iphoneos-arm.deb
+Size: 239682
+MD5sum: 1d9fe63d7db1d19e261a01d054476e45
+SHA1: 172ab9bded34511a8b8ffda7dcaa9cec5ea58a93
+SHA256: cad596395fd030eabe928d4ce84343afc3ec8d9156165d5155e0cd91715e492a
+Section: Terminal_Support
+Priority: standard
+Homepage: http://code.google.com/p/mobileterminal/
+Description: local UIKit-based Terminal emulator
+ This is a Terminal emulator for the iPhone. With it you can do all of
+ your standard system administration tasks from anywhere: ssh into
+ remote boxes, download files, edit configuration files, whatever.
+ Please note, though, that this package does not fully work yet on
+ iPhoneOS 2.x. For more information (and a status update) please click
+ below for More Information.
+Author: Allen Porter <allen.porter@gmail.com>
+Depiction: http://cydia.saurik.com/info/mobileterminal/
+Name: MobileTerminal
+
 Package: ncurses
 Version: 5.7-12
 Architecture: iphoneos-arm
