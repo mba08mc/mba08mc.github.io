@@ -6,16 +6,16 @@ Codename: iprojects
 Architectures: iphoneos-arm
 Components: main
 Description: Revivals and fixes for legacy iOS devices
-Date: Thu, 22 Oct 2026 11:51:14 UTC
+Date: Thu, 22 Oct 2026 12:51:45 UTC
 MD5Sum:
- 4d40f2217a697e569be353ad71afb704 1344 Packages
- ac3d803add14a223f5555bf3e57ede3e 740 Packages.gz
- 11d6958b937415b7754a01741487a000 806 Packages.bz2
+ ab48c6a335bfbff350b4242b239185f3 1944 Packages
+ 43140501a588fd1feb3bc56a131dd5fb 982 Packages.gz
+ 4b6130398968f345242caeedd01b8447 1054 Packages.bz2
 SHA1:
- dc948e3332b6ab3b6af0d396e04fdd795cbab9d2 1344 Packages
- d2e0f9aeb90bda04266d40bb47cad020c90da32a 740 Packages.gz
- fb269d22990fe3b1c8af9fd6365ee8697d45964d 806 Packages.bz2
+ 92915776b8e0f2c2135924f3e9e2c3c583c0c5d6 1944 Packages
+ 86a7d5afbc81d97a093035ecaa4682edea1bd5d7 982 Packages.gz
+ 9064be1a466bb1ed1b7f9cffd29145c3a74ac3bb 1054 Packages.bz2
 SHA256:
- be7830180dc336a21c453559cbfb434c17fa90aad197775f9e5d50778a9ece49 1344 Packages
- abb679f700229e4c4a77a2c487a84e6633d1fbefcd4f9f71ff2e5689e2f9f2aa 740 Packages.gz
- dbe08f0127c71470edb438e3838b692ea11c863ce1f5b6934b71ec578f4ee1f6 806 Packages.bz2
+ 995cd6f034cfa8441a0fe08248746829cc252621711a6a1f6995c513674fe58b 1944 Packages
+ e4c3959dbf64eb04ccfcd1a3a97251f5eade3c7081d5f5667b7aeb43341b86c2 982 Packages.gz
+ ea1f0c045c6f26e469fe07e9267a8f343cf2034016ea94e930611f4bb65f4336 1054 Packages.bz2
