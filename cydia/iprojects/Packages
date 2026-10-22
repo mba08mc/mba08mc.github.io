@@ -31,18 +31,18 @@ SHA256: 36432f4d56e50d1e99e0ef4d2c8d038dc7b2bedbe083e521c2b52413b1ca4255
 
 Package: com.iprojects.ifileiconfix
 Name: iFile Icon Fix
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Section: Tweaks
 Depends: eu.heinelt.ifile, uikittools
 Maintainer: Bilal Ahmed
 Author: iProjects
-Description: Fixes the broken iFile home screen icon on iOS 5 and below. Install, respring, and the proper icon is back. Removing this package restores the original icon.
-Filename: debs/com.iprojects.ifileiconfix_1.0_iphoneos-arm.deb
-Size: 5104
-MD5sum: 3497e70e25facd1c52358f5a104fd828
-SHA1: b0deb7c8077660b5f377de5977d3a17c2c849889
-SHA256: 1816a6f01c3938e5f54ac67942702f74e604c650f1d6c89d9d69d4ee671331e2
+Description: Fixes the square icon issue on iFile on older versions of iOS
+Filename: debs/com.iprojects.ifileiconfix_1.1_iphoneos-arm.deb
+Size: 5086
+MD5sum: a9503cb94a4f91d53d5b6ce358f9f64b
+SHA1: 8a8d317e10d40152c26ec35b3c4ca229f0c56465
+SHA256: 02a7e410c460f853d32901adf06d23f8ef8d104b96818d8e06f4f9a2ae85f5cd
 
 Package: net.angelxwind.appsync40plus
 Version: 1.2.2
