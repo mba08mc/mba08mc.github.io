@@ -1,0 +1,12 @@
+Origin: iProjects
+Label: iProjects (iPhoneOS 3)
+Suite: stable
+Version: 1.0
+Codename: iphoneos3
+Architectures: iphoneos-arm
+Components: main
+Description: Original 2009 Telesphoreo and BigBoss builds of the tools AppCrackr needs on iPhoneOS 3
+MD5Sum:
+ 428ab6084c1d795f124fb72fee881439 9443 Packages
+ 2aa5eb8cd432a7b5b35dbd0419a6ecde 3438 Packages.bz2
+ ec2c4a2828a2c40f84ca82a625183969 3467 Packages.gz

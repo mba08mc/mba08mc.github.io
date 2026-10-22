@@ -1,0 +1,294 @@
+Package: adv-cmds
+Version: 119-5
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 244
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: ncurses
+Provides: ps
+Filename: debs/adv-cmds_119-5_iphoneos-arm.deb
+Size: 62166
+MD5sum: d344d427d16f241f7bf01799bea3085b
+SHA1: 889372a031f7a717662c34423d33192af820d028
+SHA256: 07039ae8680117519ad95e26d222d8376d606689973c0c02ddf3542c8d82b1bf
+Section: Administration
+Priority: important
+Description: finger, fingerd, last, lsvfs, md, ps
+
+Package: bash
+Version: 4.0.17-13
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 572
+Depends: grep, ncurses, readline (>= 6.0-7), sed
+Filename: debs/bash_4.0.17-13_iphoneos-arm.deb
+Size: 314436
+MD5sum: e12cc7f5da68aeb24af2009035a9d98e
+SHA1: 34f5578282bc298a508cb1a0d494055f61ab68d4
+SHA256: 9975d18e85bdfe0f26c8a0e829de1de5cc4b51156e97e2ff520a602fb07c3093
+Section: Terminal_Support
+Priority: required
+Homepage: http://www.gnu.org/software/bash/
+Description: the best shell ever, written by Brian Fox
+Name: Bourne-Again SHell
+
+Package: com.ericasadun.utilities
+Version: beta17
+Architecture: iphoneos-arm
+Maintainer: Erica Sadun <apptapp@ericasadun.com>
+Filename: debs/com.ericasadun.utilities_beta17_iphoneos-arm.deb
+Size: 91404
+MD5sum: fa67c760a323dbb4c3a8b42f1c4085ab
+SHA1: e305d91bba17dfca31430fcbfb2c85e60c89211f
+SHA256: 4cd1424a8e9fe7bbad803fcb39cf974135f23ec686f56cf777c23b9de615df6b
+Section: Utilities
+Homepage: http://modmyi.com/info/ericautilities.php
+Description: A collection of command-line utilities for various purposes.
+Author: Erica Sadun <apptapp@ericasadun.com>
+Depiction: http://modmyi.com/info/ericautilities.d.php
+Name: Erica Utilities
+Sponsor: ModMyi.com <http://modmyi.com>
+
+Package: coreutils
+Version: 7.4-11
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 6220
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: bash, coreutils-bin (>= 7.4-5), profile.d
+Replaces: netatalk (<= 2.0.3-6)
+Provides: md5sum, sha1sum
+Filename: debs/coreutils_7.4-11_iphoneos-arm.deb
+Size: 580472
+MD5sum: 3937c4c1ca5e7c9646498cbbe33f2472
+SHA1: 65a4fda24015ec0628a0bff267e4112b0564719a
+SHA256: d5b390c55298aa04a852667ac8f37125ff73984c2921b35d9b54186fce6290d1
+Section: Utilities
+Priority: standard
+Homepage: http://www.gnu.org/software/coreutils/
+Description: core set of Unix shell utilities from GNU
+Name: Core Utilities
+
+Package: coreutils-bin
+Version: 7.4-6
+Architecture: iphoneos-arm
+Essential: yes
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 2860
+Replaces: shell-cmds (<< 118-5), coreutils (<= 7.2-9)
+Provides: dirname, kill, mktemp, su
+Filename: debs/coreutils-bin_7.4-6_iphoneos-arm.deb
+Size: 672556
+MD5sum: cc576cdb034e95ea4544052c701cbaff
+SHA1: 8506d82f89491088050b8b344db9a5890218b86c
+SHA256: 077ac120a348d94faf44becf34cb0643a7b1b03085e8c12910c5380ba3d7fdca
+Section: Utilities
+Priority: required
+Homepage: http://www.gnu.org/software/coreutils/
+Description: just the /bin folder from GNU coreutils
+Name: Core Utilities (/bin)
+
+Package: gawk
+Version: 3.1.6-2
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 1232
+Filename: debs/gawk_3.1.6-2_iphoneos-arm.deb
+Size: 424018
+MD5sum: 2d0f4c733a281f1c2fa6a910fbf43ef0
+SHA1: 65887d768d7947aec47e341a05f75f94f622413e
+SHA256: 8cc004ad1de039129c55fe36c09aa8c7b7fef922c52ccaf1597a1428b61c0954
+Section: Utilities
+Priority: important
+Description: GNU's heavy-weight implementation of awk
+Name: Gawk
+
+Package: gdb
+Version: 1119-7
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 6756
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: ncurses, readline, sqlite3
+Filename: debs/gdb_1119-7_iphoneos-arm.deb
+Size: 1680614
+MD5sum: 0418190689ab1f7e49a9634dabfa9028
+SHA1: 6386eaf8dca09b841557f4acec25edf05298a806
+SHA256: 80439fd9935a872024d9b88bcda14825b04aec9415cac0dee42645458aad578d
+Section: Development
+Priority: optional
+Homepage: http://www.gnu.org/software/gdb/
+Description: debugger for native software
+ A debugger for native software from GNU. This is Apple's Open Source
+ GDB that targets ARM. It still has some limitations, but they are being
+ worked on.
+Depiction: http://cydia.saurik.com/info/gdb/
+Name: GNU Debugger
+
+Package: ldid
+Version: 610-5
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 92
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: odcctools
+Filename: debs/ldid_610-5_iphoneos-arm.deb
+Size: 13804
+MD5sum: 3e03b4f68f7f7d17b479cbf2f76aedce
+SHA1: 8bdfe89a023fa5b19ba64cab3438d16850a802e4
+SHA256: 9330a1de783cccce2b66d1c0b4ca9c649c5664847533990132389bd53b93ce53
+Section: Development
+Priority: optional
+Description: pseudo-codesign Mach-O files
+Depiction: http://cydia.saurik.com/info/ldid/
+Name: Link Identity Editor
+
+Package: ncurses
+Version: 5.7-12
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 2452
+Pre-Depends: dpkg (>= 1.14.25-8)
+Filename: debs/ncurses_5.7-12_iphoneos-arm.deb
+Size: 318886
+MD5sum: df02d557042ad3c4f51aa6649ce8e6ef
+SHA1: aa83d0d667f1635b7d3ac7e544c74410d28a8b0a
+SHA256: b506b797623ae80b5570b23ec46d2d2c4d73ca6d867f911393b68ecc2f996018
+Section: System
+Priority: required
+Description: feature-complete terminal library
+Name: New Curses
+
+Package: odcctools
+Version: 286-8
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 7764
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: openssl, uuid
+Filename: debs/odcctools_286-8_iphoneos-arm.deb
+Size: 1092318
+MD5sum: 3a348b8217d76f9866ccdb16d5deb501
+SHA1: 28a93cfd92c55f47b0dab4a7263223b03c7db177
+SHA256: 6a88b5a7eb244ea9e02dc7793282ff4c030b56ed65bd794dcd28883f42e0a306
+Section: Development
+Priority: optional
+Homepage: http://code.google.com/p/iphone-dev/
+Description: linker and assembler for the iPhone
+Depiction: http://cydia.saurik.com/info/odcctools/
+Name: Darwin CC Tools
+
+Package: openssl
+Version: 0.9.8k-9
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 5708
+Pre-Depends: dpkg (>= 1.14.25-8)
+Filename: debs/openssl_0.9.8k-9_iphoneos-arm.deb
+Size: 1013524
+MD5sum: 200e998b74efac3238ec8ab525a04ee4
+SHA1: 921ebd6d043b60d06b5db694cad67ea7a19e4251
+SHA256: 5b22dfe17f4d00dfbed89a6cabbc0b823896e5ade6ee596e5495e03aa1efe704
+Section: Security
+Priority: standard
+Description: SSL library and cryptographic tools
+Name: OpenSSL
+
+Package: profile.d
+Version: 0-2
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 28
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: bash
+Filename: debs/profile.d_0-2_iphoneos-arm.deb
+Size: 928
+MD5sum: 73047476215218635dcdb15ea5a181aa
+SHA1: 9fff751c9bc501e9b5bcd352ee2b6bbf71abca38
+SHA256: 170b0a7bfdebb0b263e047ff72527df1d37cd86f7a06e915bf69088b1cff9d75
+Section: Administration
+Priority: standard
+Description: makes packaging for /etc/profile reasonable
+Name: Profile Directory
+
+Package: readline
+Version: 6.0-7
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 332
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: ncurses
+Filename: debs/readline_6.0-7_iphoneos-arm.deb
+Size: 103964
+MD5sum: 65d22f2f7d3380e8c25b852989350a5e
+SHA1: 9f88718f30d27b87d0e9fc336a3bf8c53a64a0f8
+SHA256: 464b579001944e8f5e5bd9ffd18746459ed9cb396415ce89ac2c4caf384ac90c
+Section: Development
+Priority: required
+Description: command-line history management
+
+Package: sqlite3
+Version: 3.5.9-12
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 348
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: sqlite3-lib
+Replaces: sqlite3 (<= 3.5.9-11)
+Filename: debs/sqlite3_3.5.9-12_iphoneos-arm.deb
+Size: 71928
+MD5sum: 6d47c112692ac00af61bd84e3847aa42
+SHA1: 6e83f8110879eabe01eb369b8cf769200eb5a90b
+SHA256: 0beb613e7ad66c698421f239d98ad885b414ae0f1d55cb2476a70d8c566ddc92
+Section: Data_Storage
+Priority: standard
+Description: embedded database used by iPhoneOS
+Name: SQLite 3.x
+
+Package: sqlite3-lib
+Version: 3.5.9-1
+Architecture: iphoneos-arm
+Essential: yes
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 12
+Pre-Depends: dpkg (>= 1.14.25-8)
+Depends: firmware (>= 3.0) | sqlite3-dylib
+Filename: debs/sqlite3-lib_3.5.9-1_iphoneos-arm.deb
+Size: 694
+MD5sum: 3dc7eed38627cb5cd2b50c1fbea8afdf
+SHA1: 649602c7a88bd51a1144e05733f4d976cef735e6
+SHA256: 2ab5a869348c5013d5f7d0158b3f4edfcbeb86242f4d2ca3aa37ab5c259039c4
+Section: Data_Storage
+Priority: required
+Description: represents the library for SQLite
+Name: SQLite 3.x Library
+
+Package: uuid
+Version: 1.6.0-2
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 140
+Filename: debs/uuid_1.6.0-2_iphoneos-arm.deb
+Size: 38842
+MD5sum: b7a0de9d84fec7afee8ed7c1b06fa37c
+SHA1: 5441ce093bd575565e2fbba6bae609b11982bd35
+SHA256: 5624ff2442bf3b53a8ebe47da52f84ad47ffb6181518f236e8179b419455fe07
+Section: System
+Priority: important
+Description: universally unique identifiers
+Name: UUID Generator
+
+Package: zip
+Version: 2.32-5
+Architecture: iphoneos-arm
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Installed-Size: 232
+Filename: debs/zip_2.32-5_iphoneos-arm.deb
+Size: 98844
+MD5sum: 57eb3c5dd3e1da6ad15df22ddc91f583
+SHA1: a7d12af6b1811a948962a00d9ed8e6ae379a483d
+SHA256: fee4e63d8808363205bb284c641fc90e16e4a8c7cfd389b4938aab9a161b3a16
+Section: Archiving
+Priority: important
+Description: standard Windows compression tool
+
